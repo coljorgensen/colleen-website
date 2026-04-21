@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Colleen Jorgensen, D.O.</title>
+  <meta name="description" content="Get in touch with Colleen Jorgensen, D.O. for client inquiries, professional training, speaking invitations, and general questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Milonga:wght@400&amp;display=swap"><style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+    :root{--color-primary:#5C4033;--color-secondary:#8B6F5E;--color-accent:#C17F5A;--color-bg:#FAF7F2;--color-bg-alt:#F2EDE4;--color-text:#2A1F1A;--color-text-muted:#7A6155;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--container-width:1100px;--radius:12px;--shadow:0 4px 24px rgba(42,31,26,0.08);--color-accent-soft:#E4C7A8;--color-blush:#D4937A;--color-border:#DDD0C0;  --font-dare: 'Milonga', system-ui, sans-serif;
+}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{font-family:var(--font-body);font-weight:300;background:var(--color-bg);color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased;}
+    img{max-width:100%;height:auto;display:block;}
+    a{color:inherit;text-decoration:none;}
+    ul{list-style:none;}
+    .container{width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);}
+    h1,h2,h3,h4,h5{font-family:var(--font-heading);line-height:1.2;color:var(--color-primary);}
+    h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:300;}
+    h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:300;}
+    h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:400;}
+    h4{font-size:1.05rem;font-weight:400;}
+    p{margin-bottom:var(--space-sm);}
+    p:last-child{margin-bottom:0;}
+    .section-label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-xs);display:block;}
+    .btn{display:inline-block;padding:.8rem 1.8rem;border-radius:50px;font-family:var(--font-body);font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s ease;border:2px solid transparent;text-align:center;}
+    .btn-primary{background:var(--color-accent);color:#fff;border-color:var(--color-accent);}
+    .btn-primary:hover{background:var(--color-primary);border-color:var(--color-primary);}
+    .btn-outline{background:transparent;color:var(--color-accent);border-color:var(--color-accent);}
+    .btn-outline:hover{background:var(--color-accent);color:#fff;}
+    .btn-secondary{background:var(--color-secondary);color:#fff;border-color:var(--color-secondary);}
+    .btn-secondary:hover{background:#627058;border-color:#627058;}
+    .btn-white{background:#fff;color:var(--color-accent);border-color:#fff;}
+    .btn-white:hover{background:var(--color-bg-alt);}
+    #main-nav{position:sticky;top:0;z-index:1000;background:var(--color-bg);border-bottom:1px solid var(--color-border);box-shadow:0 2px 12px rgba(42,31,26,.06);}
+    .nav-inner{max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;height:70px;}
+    .nav-logo{font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--color-text);white-space:nowrap;line-height:1.2;}
+    .nav-logo span{display: block;font-family: var(--font-body);font-size: 0.68rem;font-weight: 400;letter-spacing: 0.10em;text-transform: uppercase;color: var(--color-text-muted);}
+    .nav-links{display:flex;align-items:center;gap:1.1rem;}
+    .nav-links a{font-size:.85rem;font-weight:500;color:var(--color-text-muted);transition:color .2s;white-space:nowrap;}
+    .nav-links a:hover,.nav-links a.active{color:var(--color-primary);}
+    .nav-links .nav-cta{background:var(--color-accent);color:#fff !important;padding:.45rem 1.1rem;border-radius:50px;}
+    .nav-links .nav-cta:hover{background:var(--color-primary) !important;}
+    .hamburger{display:none;flex-direction:column;justify-content:space-around;width:28px;height:22px;background:none;border:none;cursor:pointer;padding:0;z-index:9001;flex-shrink:0;}
+    .hamburger span{display:block;width:100%;height:2px;background:var(--color-text);border-radius:2px;transition:all .3s ease;}
+    @media(max-width:960px){
+      .hamburger{display:flex;}
+      .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:var(--color-bg);flex-direction:column;align-items:flex-start;gap:0;padding:var(--space-xs) 0;border-bottom:2px solid var(--color-border);box-shadow:0 8px 24px rgba(42,31,26,.1);z-index:9000;overflow-y:auto;max-height:calc(100vh - 70px);}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:.85rem var(--space-md);font-size:1rem;border-bottom:1px solid var(--color-border);}
+      .nav-links .nav-cta{margin:var(--space-sm) var(--space-md);display:inline-block;border-radius:50px;}
+    }
+    footer{background:#2E211A;color:rgba(255,255,255,.85);padding:var(--space-xl) 0 var(--space-md);}
+    .footer-inner{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:var(--space-lg);padding-bottom:var(--space-lg);border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer-brand strong{font-family:var(--font-heading);font-size:1.05rem;font-weight:400;color:#fff;display:block;margin-bottom:var(--space-xs);}
+    .footer-brand p{color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:.25rem;}
+    .footer-nav{display:flex;flex-direction:column;gap:.5rem;}
+    .footer-nav a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
+    .footer-nav a:hover{color:var(--color-accent);}
+    .footer-contact a{color:rgba(255,255,255,.6);font-size:.875rem;display:block;margin-bottom:.5rem;transition:color .2s;}
+    .footer-contact a:hover{color:var(--color-accent);}
+    .social-links{display:flex;gap:1rem;margin-top:var(--space-sm);flex-wrap:wrap;}
+    .social-links a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
+    .social-links a:hover{color:var(--color-accent);}
+    .footer-bottom{text-align:center;padding-top:var(--space-md);}
+    .footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem;margin:0;}
+    @media(max-width:700px){.footer-inner{grid-template-columns:1fr;gap:var(--space-md);}}
+    .section{padding:var(--space-xl) 0;}
+    .section-alt{background:var(--color-bg-alt);}
+    .section-dark{background:#2E211A;}
+    .section-dark h2,.section-dark h3,.section-dark h4{color:#fff;}
+    .section-dark p,.section-dark li{color:rgba(255,255,255,.72);}
+    .section-dark .section-label{color:var(--color-accent);}
+    .section-primary{background:var(--color-primary);}
+    .section-primary h2,.section-primary h3,.section-primary p{color:#fff;}
+    .section-primary .section-label{color:var(--color-accent-soft);}
+    .section-header{margin-bottom:var(--space-lg);}
+    .section-header p{color:var(--color-text-muted);max-width:600px;}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-md);}
+    @media(max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+    .card{background:var(--color-bg);border-radius:var(--radius);padding:var(--space-md);box-shadow:var(--shadow);}
+    .card-alt{background:var(--color-bg-alt);box-shadow:none;border:1px solid var(--color-border);}
+    .card h3,.card h4{margin-bottom:var(--space-xs);}
+    .card p{color:var(--color-text-muted);font-size:.93rem;}
+    .card-icon{width:48px;height:48px;border-radius:12px;background:var(--color-accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-sm);font-size:1.4rem;}
+    .card-link{display:inline-block;margin-top:var(--space-sm);font-size:.88rem;font-weight:600;color:var(--color-accent);}
+    .card-link:hover{text-decoration:underline;}
+    .testimonial{background:var(--color-bg);border-left:4px solid var(--color-accent);padding:var(--space-md);border-radius:0 var(--radius) var(--radius) 0;}
+    .testimonial blockquote{font-style:italic;font-size:.97rem;line-height:1.75;color:var(--color-text);margin-bottom:var(--space-xs);}
+    .testimonial cite{font-size:.82rem;font-weight:600;color:var(--color-text-muted);font-style:normal;}
+    .cta-section{background:var(--color-bg-alt);padding:var(--space-xl) 0;text-align:center;}
+    .cta-section h2{margin-bottom:var(--space-sm);}
+    .cta-section p{color:var(--color-text-muted);max-width:540px;margin:0 auto var(--space-lg);}
+    .text-center{text-align:center;}
+    .text-muted{color:var(--color-text-muted);}
+    .highlight{color:var(--color-accent);}
+    .divider{border:none;border-top:1px solid var(--color-border);margin:var(--space-lg) 0;}
+    .pill{display:inline-block;background:rgba(228,199,168,.5);color:var(--color-accent);padding:.28rem .8rem;border-radius:50px;font-size:.77rem;font-weight:600;}
+    .pill-teal{background:rgba(212,147,122,.2);color:var(--color-blush);}
+    .stat-box{text-align:center;padding:var(--space-md);}
+    .stat-number{font-family:var(--font-heading);font-size:2.8rem;font-weight:300;color:var(--color-accent);line-height:1;display:block;}
+    .stat-label{font-size:.88rem;color:var(--color-text-muted);margin-top:.25rem;display:block;}
+    .timeline{position:relative;padding-left:2rem;}
+    .timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:var(--color-border);}
+    .timeline-item{position:relative;margin-bottom:var(--space-md);}
+    .timeline-item::before{content:'';position:absolute;left:-1.6rem;top:.48rem;width:12px;height:12px;border-radius:50%;background:var(--color-accent);}
+    .timeline-item h4{margin-bottom:.25rem;}
+    .timeline-item p{font-size:.9rem;color:var(--color-text-muted);}
+    .faq-item{border-bottom:1px solid var(--color-border);padding:var(--space-sm) 0;}
+    .faq-q{font-weight:600;font-size:1rem;margin-bottom:.4rem;color:var(--color-text);}
+    .faq-a{color:var(--color-text-muted);font-size:.93rem;}
+    .pathway-card{background:var(--color-bg);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
+    .pathway-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(42,31,26,.12);}
+    .pathway-card-img{height:190px;overflow:hidden;background:var(--color-bg-alt);}
+    .pathway-card-img img{width:100%;height:100%;object-fit:cover;}
+    .pathway-card-body{padding:var(--space-md);}
+    .pathway-card-body h3{margin-bottom:var(--space-xs);}
+    .pathway-card-body p{font-size:.93rem;color:var(--color-text-muted);margin-bottom:var(--space-sm);}
+    .btn-group{display:flex;gap:var(--space-sm);flex-wrap:wrap;}
+    .hero{padding:var(--space-xl) 0;background:var(--color-bg-alt);}
+    .hero h1{margin-bottom:var(--space-sm);}
+    .hero .lead{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);max-width:580px;}
+    .hero-two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;}
+    @media(max-width:768px){.hero-two-col{grid-template-columns:1fr;}}
+    .check-list{display:flex;flex-direction:column;gap:.65rem;}
+    .check-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem;color:var(--color-text-muted);}
+    .check-list li::before{content:'\2713';color:var(--color-primary);font-weight:700;flex-shrink:0;}
+    .num-circle{background:var(--color-primary);color:#fff;font-family:var(--font-heading);font-size:1.3rem;font-weight:700;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .num-circle-teal{background:var(--color-blush);}
+    @media print{#main-nav,footer{display:none;}}
+  </style>
+  
+  
+</head>
+<body>
+  <nav id="main-nav" style="">
+    <div class="nav-inner">
+      <a class="nav-logo" href="./index.html" data-editable="">Colleen Jorgensen, D.O.<span>Osteopath &amp; Pain Care Educator</span></a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./work-with-me.html">Work With Me</a></li>
+        <li><a href="./dare.html">DARE to Heal</a></li>
+        <li><a href="./training.html">Trainings</a></li>
+        <li><a href="./speaking.html">Speaking</a></li>
+        <li><a href="./resources.html">Free Resources</a></li>
+        <li><a href="./contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+    <script>
+      (function(){
+        const nav=document.currentScript.closest('nav');
+        nav.addEventListener('click',function(e){
+          if(e.target.closest('.hamburger')){
+            const btn=nav.querySelector('.hamburger');
+            const links=nav.querySelector('.nav-links');
+            const expanded=btn.getAttribute('aria-expanded')==='true';
+            btn.setAttribute('aria-expanded',String(!expanded));
+            links.classList.toggle('open');
+          }
+        });
+      })();
+    </script>
+  </nav>
+
+  <section class="hero" data-zone="hero" data-zone-label="Hero">
+    <div class="container" style="max-width:700px;">
+      <span class="section-label" data-editable="">Get in Touch</span>
+      <h1 data-editable="">A good conversation starts with a simple hello.</h1>
+      <p class="lead" data-editable="">Whether you are ready to book, still exploring your options, or reaching out with a speaking invitation — Colleen is glad to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section" data-zone="inquiry-options" data-zone-label="Inquiry Options">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-editable="">How Can I Help?</span>
+        <h2 data-editable="">What are you reaching out about?</h2>
+      </div>
+      <div class="grid-4">
+        <div class="card card-alt">
+          <div class="card-icon">🧍</div>
+          <h4 data-editable="">Working with Colleen</h4>
+          <p data-editable="">Osteopathy, therapeutic movement, or online courses for individuals seeking support with pain, tension, or movement.</p>
+          <a href="mailto:coljorgensen13@gmail.com?subject=Individual%20Inquiry" class="card-link" data-editable="">Email Colleen →</a>
+        </div>
+        <div class="card card-alt">
+          <div class="card-icon">🎓</div>
+          <h4 data-editable="">Professional Training</h4>
+          <p data-editable="">Certificate programs and training for healthcare providers, yoga teachers, and somatic practitioners.</p>
+          <a href="mailto:coljorgensen13@gmail.com?subject=Professional%20Training%20Inquiry" class="card-link" data-editable="">Inquire about training →</a>
+        </div>
+        <div class="card card-alt">
+          <div class="card-icon">🎤</div>
+          <h4 data-editable="">Speaking &amp; Podcasts</h4>
+          <p data-editable="">Invitations for podcast appearances, keynotes, conferences, webinars, and guest teaching.</p>
+          <a href="mailto:coljorgensen13@gmail.com?subject=Speaking%20Invitation" class="card-link" data-editable="">Send an invitation →</a>
+        </div>
+        <div class="card card-alt">
+          <div class="card-icon">💬</div>
+          <h4 data-editable="">General Questions</h4>
+          <p data-editable="">Not sure where to start, or simply want to say hello? That is perfectly fine. Colleen will reply directly.</p>
+          <a href="mailto:coljorgensen13@gmail.com?subject=General%20Question" class="card-link" data-editable="">Say hello →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" data-zone="contact-details" data-zone-label="Contact Details">
+    <div class="container">
+      <div class="grid-2" style="gap:var(--space-xl);align-items:start;">
+        <div>
+          <span class="section-label" data-editable="">Contact Information</span>
+          <h2 data-editable="">Reach Colleen directly</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--space-md);margin-top:var(--space-md);">
+            <div>
+              <h4 data-editable="">Email</h4>
+              <a href="mailto:coljorgensen13@gmail.com" style="color:var(--color-primary);font-size:1.05rem;font-weight:500;" data-editable="">coljorgensen13@gmail.com</a>
+            </div>
+            <div>
+              <h4 data-editable="">Location</h4>
+              <p data-editable="">Montreal, Canada<br>In-person sessions available locally.<br>Online sessions available worldwide.</p>
+            </div>
+            <div>
+              <h4 data-editable="">Social Media</h4>
+              <div class="btn-group">
+                <a href="#" class="btn btn-outline" style="padding:.5rem 1.1rem;font-size:.88rem;" data-editable="">Instagram</a>
+                <a href="#" class="btn btn-outline" style="padding:.5rem 1.1rem;font-size:.88rem;" data-editable="">YouTube</a>
+                <a href="#" class="btn btn-outline" style="padding:.5rem 1.1rem;font-size:.88rem;" data-editable="">Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="section-label" data-editable="">Write to Colleen</span>
+          <h2 data-editable="">Send a message</h2>
+          <p data-editable="">Use one of the links below to send an email directly. Please include a brief note about your situation or question so Colleen can respond thoughtfully.</p>
+          <div style="margin-top:var(--space-md);display:flex;flex-direction:column;gap:var(--space-sm);">
+            <a href="mailto:coljorgensen13@gmail.com?subject=Working%20Together" class="btn btn-primary" data-editable="">Working Together →</a>
+            <a href="mailto:coljorgensen13@gmail.com?subject=Professional%20Training" class="btn btn-secondary" data-editable="">Professional Training →</a>
+            <a href="mailto:coljorgensen13@gmail.com?subject=Speaking%20Invitation" class="btn btn-outline" data-editable="">Speaking / Podcast →</a>
+            <a href="mailto:coljorgensen13@gmail.com" class="btn btn-outline" data-editable="">General Question →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-zone="expectations" data-zone-label="What to Expect">
+    <div class="container" style="max-width:680px;">
+      <span class="section-label" data-editable="">What to Expect</span>
+      <h2 data-editable="">How Colleen responds</h2>
+      <p data-editable="">Colleen reads every message personally and responds as thoughtfully as she can. You can expect to hear back within <span data-editable="">3–5 business days</span> during regular periods.</p>
+      <p data-editable="">For client inquiries, a brief initial exchange by email will help clarify what you are looking for before scheduling anything. There is no obligation and no pressure to commit until you feel ready.</p>
+      <p data-editable="">For speaking and podcast invitations, please include your show or event name, your audience, and your timeline. This makes it easier to give you a helpful and timely response.</p>
+    </div>
+  </section>
+
+  <section class="cta-section" data-zone="contact-closing" data-zone-label="Closing Reassurance">
+    <div class="container" style="max-width:540px;">
+      <h2 data-editable="">There is no wrong way to reach out.</h2>
+      <p data-editable="">Whether you know exactly what you want or are still figuring it out — a simple email is always a fine place to start.</p>
+      <a href="mailto:coljorgensen13@gmail.com" class="btn btn-primary" data-editable="">coljorgensen13@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong data-editable="">Colleen Jorgensen, D.O.</strong>
+        <p data-editable="">Osteopath · Movement Specialist · Pain Care Educator</p>
+        <p data-editable="">Montreal, Canada</p>
+        <div class="social-links">
+          <a href="#" data-editable="">Instagram</a>
+          <a href="#" data-editable="">YouTube</a>
+          <a href="#" data-editable="">Facebook</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./work-with-me.html">Work With Me</a>
+        <a href="./dare.html">D.A.R.E. to Heal</a>
+        <a href="./training.html">Trainings</a>
+        <a href="./speaking.html">Speaking</a>
+        <a href="./resources.html">Free Resources</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <p style="color:rgba(255,255,255,.5);font-size:.85rem;margin-bottom:.5rem;" data-editable="">Questions? Reach out.</p>
+        <a href="mailto:coljorgensen13@gmail.com" data-editable="">coljorgensen13@gmail.com</a>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;margin-top:.5rem;" data-editable="">Montreal, Canada</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p data-editable="">© 2025 Colleen Jorgensen, D.O. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+</body></html>
