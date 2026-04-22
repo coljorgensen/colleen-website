@@ -271,6 +271,44 @@ section[data-zone="osteopathy"] .btn {
     .category-group {
         margin-top: var(--space-lg);
     }
+}</style><style id="__gitqi-section-work-cta-styles">#work-cta.cta-section {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-alt);
+  text-align: center;
+  position: relative;
+}
+
+#work-cta .cta-btn-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+#work-cta h2 {
+  margin-bottom: var(--space-sm);
+}
+
+#work-cta p {
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin: 0 auto var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  #work-cta .cta-btn-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #work-cta .btn {
+    width: 100%;
+  }
 }</style></head>
 <body style="">
   <nav id="main-nav" style="">
@@ -976,16 +1014,17 @@ section[data-zone="osteopathy"] .btn {
 
   
 
-  <section class="cta-section" data-zone="work-cta" data-zone-label="CTA" id="work-cta" style="position: relative;">
-    <div class="container">
-      <h2 data-editable="">A good fit starts with a connection.</h2>
-      <p data-editable="">Reach out by email with your questions or to explore the right way to work together. There is no pressure, only clarity.</p>
-      <div class="btn-group" style="justify-content:center;">
-        <a href="./contact.html" class="btn btn-primary" data-editable="">Get in Touch</a>
-        <a href="./dare.html" class="btn btn-outline" data-editable="">Explore D.A.R.E. to Heal</a>
-      </div>
+  <section class="cta-section" data-zone="work-cta" data-zone-label="CTA" id="work-cta">
+  <div class="container">
+    <h2 data-editable="">A good fit starts with a connection.</h2>
+    <p data-editable="">Reach out by email with your questions or to explore the right way to work together. There is no pressure, only clarity.</p>
+    <div class="cta-btn-group">
+      <a href="./contact.html" class="btn btn-primary" data-editable="">Get in Touch</a>
+      <a href="./dare.html" class="btn btn-outline" data-editable="">Explore D.A.R.E. to Heal</a>
+      <a href="#newsletter" class="btn btn-secondary" data-editable="">Subscribe to the Newsletter</a>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <div class="container footer-inner">
