@@ -338,6 +338,123 @@
   .section-dare-about .video-container {
     margin-top: var(--space-md);
   }
+}</style><style id="__gitqi-section-dare-receives-styles">.dare-receives-section {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-alt);
+}
+
+.dare-receives-section .section-header {
+  margin-bottom: var(--space-lg);
+}
+
+.dare-receives-section .section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.dare-receives-section h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 300;
+  margin-bottom: var(--space-sm);
+}
+
+.dare-receives-section .cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.dare-receives-section .card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.dare-receives-section .card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.dare-receives-section .card h4 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.dare-receives-section .card .content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dare-receives-section .card p {
+  color: var(--color-text-muted);
+  font-size: 0.93rem;
+  margin-bottom: var(--space-sm);
+}
+
+.dare-receives-section .card p:last-child {
+  margin-bottom: 0;
+}
+
+.dare-receives-section .card ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-top: var(--space-xs);
+}
+
+.dare-receives-section .card li {
+  color: var(--color-accent);
+  font-size: 0.93rem;
+  margin-bottom: var(--space-xs);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.dare-receives-section .card li::before {
+  content: "\2022"; /* Orange bullet point */
+  color: var(--color-accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.dare-receives-section .card .extra-details {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .dare-receives-section .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dare-receives-section .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
 }</style></head>
 <body style="">
   <nav id="main-nav" style="">
@@ -383,7 +500,7 @@
       <p class="lead" data-editable="">A structured, compassionate 12 week online pain care program that helps people living with chronic pain move from fear and confusion toward curiosity, confidence, and meaningful participation in their lives.</p>
       <div class="btn-group">
         <a href="./contact.html" class="btn btn-white" data-editable="">Join the Waitlist</a>
-        <a href="#dare-receives" class="btn btn-outline-white" data-editable="">Learn More</a>
+        <a href="./dare.html#dare-who" class="btn btn-outline-white" data-editable="">Learn More</a>
       </div>
       <p class="small-text" data-editable="">Next cohort: date to be announced. Add your name to the waitlist to be notified first.</p>
     </div>
@@ -487,22 +604,22 @@
       <div class="grid-4" style="margin-top:var(--space-lg);">
         <div class="card card-alt">
           <div class="card-icon">🪨</div>
-          <h4 data-editable=""><span style="font-size: 1.25em;">Whole-Person Approach</span></h4>
+          <h4 data-editable=""><span data-gitqi-style="" style="font-size: 1.25em;">Whole-Person Approach</span></h4>
           <p data-editable="">Pain is not just in your body. It involves your nervous system, your history, and your context. This program addresses all of it.</p>
         </div>
         <div class="card card-alt">
           <div class="card-icon">📚</div>
-          <h4 data-editable=""><span style="font-size: 1.25em;">Education + Practice</span></h4>
+          <h4 data-editable=""><span data-gitqi-style="" style="font-size: 1.25em;">Education + Practice</span></h4>
           <p data-editable="">Clear pain science explanations alongside practical tools you can apply to your body and daily life right away.</p>
         </div>
         <div class="card card-alt">
           <div class="card-icon">🤝</div>
-          <h4 data-editable=""><span style="font-size: 1.25em;">Community &amp; Support</span></h4>
+          <h4 data-editable=""><span data-gitqi-style="" style="font-size: 1.25em;">Community &amp; Support</span></h4>
           <p data-editable="">Cohort-based learning means you move through the material alongside others who understand what you carry. You are not doing this alone.</p>
         </div>
         <div class="card card-alt">
           <div class="card-icon">💡</div>
-          <h4 data-editable=""><span style="font-size: 1.25em;">Hopeful &amp; Practical</span></h4>
+          <h4 data-editable=""><span data-gitqi-style="" style="font-size: 1.25em;">Hopeful &amp; Practical</span></h4>
           <p data-editable="">DARE is grounded, not abstract. Every module connects science to lived experience so you leave with insight and genuine confidence.</p>
         </div>
       </div>
@@ -516,7 +633,7 @@
       <div class="five-things-list">
         <div class="five-things-item">
           <div class="num-circle">1</div>
-          <div><h4 data-editable=""><span style="font-size: 1.25em;"><span style="font-size: 0.75em;">Pain is real - always.</span></span></h4><p data-editable="">Pain is produced by the nervous system as a protective signal. It is never “made up” and never “just in your head.” Your experience is valid and it is real.</p></div>
+          <div><h4 data-editable=""><span style="font-size: 1.25em;" data-gitqi-style=""><span style="font-size: 0.75em;" data-gitqi-style="">Pain is real - always.</span></span></h4><p data-editable="">Pain is produced by the nervous system as a protective signal. It is never “made up” and never “just in your head.” Your experience is valid and it is real.</p></div>
         </div>
         <div class="five-things-item">
           <div class="num-circle">2</div>
@@ -538,22 +655,85 @@
     </div>
 </section>
 
-  <section class="section section-alt" id="dare-receives" data-zone="dare-receives" data-zone-label="What Participants Receive" style="position: relative;">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-label" data-editable="">OPTION ONE:&nbsp; &nbsp;Inside the Program</span>
-        <h2 data-editable="">What you receive in the DARE to Heal</h2>
+  <section class="section section-alt dare-receives-section" id="dare-receives" data-zone="dare-receives" data-zone-label="What Participants Receive" style="position: relative;">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label" data-editable="">OPTION ONE: Inside the Program</span>
+      <h2 data-editable="">What you receive in the DARE to Heal</h2>
+    </div>
+    <div class="cards-wrapper">
+      <div class="card">
+        <div class="card-icon">🎥</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Weekly Video Modules</h4>
+          <p data-editable="">New content is unlocked every week. These will cover:</p>
+          <ul>
+            <li data-editable="">The theme of the week</li>
+            <li data-editable="">Pain care nugget</li>
+            <li data-editable="">Movement snacks</li>
+            <li data-editable="">Breath practice</li>
+            <li data-editable="">Mindfulness / awareness practice</li>
+            <li data-editable="">Nervous system regulation practice (vagal tone)</li>
+            <li data-editable="">Applied neurology exercises</li>
+            <li data-editable="">Journal prompt</li>
+            <li data-editable="">Curiosity exploration</li>
+          </ul>
+        </div>
       </div>
-      <div class="grid-3">
-        <div class="card"><div class="card-icon">🎥</div><h4 data-editable=""><span style="font-size: 1.25em;">Weekly Video Modules</span></h4><p data-editable="">New content is unlocked every week.<br><br>These will cover:<br>The theme of the week<br></p><div><span style="font-size: 14.88px;">Pain care nugget</span></div><div><span style="font-size: 14.88px;">Movement snacks</span></div><div><span style="font-size: 14.88px;">Breath practice</span></div><div><span style="font-size: 14.88px;">Mindfulness / awareness practice</span></div><div><span style="font-size: 14.88px;">Nervous system regulation practice (vagal tone)</span></div><div><span style="font-size: 14.88px;">Applied neurology exercises</span></div><div><span style="font-size: 14.88px;">Journal prompt</span></div><div><span style="font-size: 14.88px;">Curiosity exploration</span></div><br><br><p></p></div>
-        <div class="card"><div class="card-icon">🤾</div><h4 data-editable=""><span style="font-size: 1.25em;">Six Live Group Coaching calls</span></h4><p data-editable="">Connect directly synchronously with Colleen and&nbsp; with the members of your cohort.<br><br>In these calls:<br>Q &amp;A session with Colleen<br>Your updates on your experience<br>Explore a new guided experience based on the themes of the week<br><br></p></div>
-        <div class="card"><div class="card-icon">📄</div><h4 data-editable=""><span style="font-size: 1.25em;">Workbooks &amp; Resources</span></h4><p data-editable="">Downloadable materials that help you integrate learning, track your insights, and build a personal toolkit for ongoing support.<br><br></p><div><span style="font-size: 14.88px;">Pain care e-book</span></div><div><span style="font-size: 14.88px;">DARE checklist</span></div><div><span style="font-size: 14.88px;">Sleep hygiene PDF</span></div><div><span style="font-size: 14.88px;">Nutritional tips PDF</span></div><div><span style="font-size: 14.88px;">Dry brushing PDF</span></div><div><span style="font-size: 14.88px;">Set Yourself Up for Success PDF &amp; video</span></div><div><span style="font-size: 14.88px;">Suggested Props PDF</span></div><div><span style="font-size: 14.88px;">Play vs Work Mindset video</span></div><div><span style="font-size: 14.88px;">To Plan or Not to Plan video</span></div><p></p></div>
-        <div class="card"><div class="card-icon">🎧</div><h4 data-editable=""><span style="font-size: 1.25em;">Recordings &amp; Replays</span></h4><p data-editable="">Access to the DARE monthly membership where you can access ALL the past DARE webinars.</p></div>
-        <div class="card"><div class="card-icon">🌐</div><h4 data-editable=""><span style="font-size: 1.25em;">Community Access</span></h4><p data-editable="">Connect with a thoughtful cohort navigating similar experiences. Community is a meaningful part of the healing process.</p></div>
-        <div class="card"><div class="card-icon">💬</div><h4 data-editable=""><span style="font-size: 1.25em;">Cost:</span></h4><p data-editable="">$425 (tac included)</p></div>
+      <div class="card">
+        <div class="card-icon">🤾</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Six Live Group Coaching calls</h4>
+          <p data-editable="">Connect directly synchronously with Colleen and with the members of your cohort. In these calls:</p>
+          <ul>
+            <li data-editable="">Q &amp; A session with Colleen</li>
+            <li data-editable="">Your updates on your experience</li>
+            <li data-editable="">Explore a new guided experience based on the themes of the week</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Workbooks &amp; Resources</h4>
+          <p data-editable="">Downloadable materials that help you integrate learning, track your insights, and build a personal toolkit for ongoing support.</p>
+          <ul>
+            <li data-editable="">Pain care e-book</li>
+            <li data-editable="">DARE checklist</li>
+            <li data-editable="">Sleep hygiene PDF</li>
+            <li data-editable="">Nutritional tips PDF</li>
+            <li data-editable="">Dry brushing PDF</li>
+            <li data-editable="">Set Yourself Up for Success PDF &amp; video</li>
+            <li data-editable="">Suggested Props PDF</li>
+            <li data-editable="">Play vs Work Mindset video</li>
+            <li data-editable="">To Plan or Not to Plan video</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎧</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Recordings &amp; Replays</h4>
+          <p data-editable="">Access to the DARE monthly membership where you can access ALL the past DARE webinars.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Community Access</h4>
+          <p data-editable="">Community is a meaningful part of the healing process.&nbsp; Connect with a thoughtful cohort navigating similar experiences on an exclusive community FaceBook Group.&nbsp;&nbsp;</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <div class="content-wrapper">
+          <h4 data-editable="">Cost:</h4>
+          <p data-editable="">$425 (tac included)</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="section" data-zone="dare-testimonials" data-zone-label="Testimonials" id="dare-testimonials" style="position: relative;">
     <div class="container">
