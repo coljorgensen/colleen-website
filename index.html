@@ -136,77 +136,164 @@
   
   
 <style id="__gitqi-section-hero-styles">.hero {
-    padding-top: calc(var(--space-xl) + var(--space-lg)); /* Increased top padding */
-    padding-bottom: var(--space-xl);
-    background: var(--color-bg-alt);
-    position: relative; /* Moved from inline style */
-}
-.hero h1 {
-    font-size: clamp(2.6rem, 5.5vw, 4.2rem); /* Specific size for hero h1, overriding base */
-    letter-spacing: -0.01em;
-    line-height: 1.18; /* From original inline style */
-    margin-bottom: var(--space-sm); /* Using existing hero h1 margin */
-}
-.hero h1 .hero-h1-part1 {
-    font-style: italic;
-    background-color: transparent; /* Changed to transparent to match the rest of the page */
-}
-.hero h1 .hero-h1-part2 {
-    color: var(--color-accent);
-}
-.hero h1 .hero-h1-part3 {
-    color: var(--color-primary);
-    font-style: italic;
-}
-.hero .lead {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-lg);
-    max-width: 580px;
-}
-.hero-two-col {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Made text column wider */
-    gap: var(--space-xl);
-    align-items: center;
-}
-.hero-image-container {
-    /* Made the oval 1.25x bigger by scaling the entire calc expression */
-    width: calc((18.75rem + var(--space-xl)) * 1.25);
-    height: calc((25rem + var(--space-xl)) * 1.25);
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    background: var(--color-bg-alt);
-    /* MODIFIED: Added a 4px frame shadow before the main shadow */
-    box-shadow: 0 0 0 4px var(--color-border), var(--shadow);
-    margin: 0 auto;
-}
-.hero-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer; /* Moved from inline style */
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-alt);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Responsive adjustments for the hero section */
-@media (max-width: 768px) {
-    .hero-two-col {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
-    .hero-image-container {
-        /* Adjust width for smaller screens, maintaining 1.25x proportionality */
-        width: calc((16.25rem + var(--space-lg)) * 1.25);
-        height: calc((21.875rem + var(--space-lg)) * 1.25);
-        margin-top: var(--space-md);
-    }
+.hero h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  letter-spacing: -0.01em;
+  line-height: 1.18;
+  margin-bottom: var(--space-sm);
 }
-@media (max-width: 480px) {
-    .hero-image-container {
-        /* Adjust width for even smaller screens, maintaining 1.25x proportionality */
-        width: calc((13.75rem + var(--space-md)) * 1.25);
-        height: calc((18.75rem + var(--space-md)) * 1.25);
-    }
+
+.hero h1 .hero-h1-part1 {
+  font-style: italic;
+  display: block;
+}
+
+.hero h1 .hero-h1-part2 {
+  color: var(--color-accent);
+}
+
+.hero h1 .hero-h1-part3 {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.hero .lead {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 580px;
+}
+
+.hero-two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content-left {
+  z-index: 2;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding-top: 100%; /* Create a square aspect ratio */
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  box-shadow: 0 0 0 8px #fff, var(--shadow);
+  border: 1px solid var(--color-border);
+}
+
+.hero-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-socials {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  align-items: center;
+}
+
+.social-btn {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.social-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* Background shapes for visual interest */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(193, 127, 90, 0.08) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 40%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(92, 64, 51, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+@media (max-width: 960px) {
+  .hero-two-col {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-content-left {
+    order: 1;
+  }
+  .hero-image-wrapper {
+    order: 2;
+    margin-top: var(--space-lg);
+  }
+  .hero-image-container {
+    max-width: 320px;
+  }
+  .hero .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-group, .hero-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }</style><style id="__gitqi-section-how-colleen-helps-styles">/* all CSS needed for this section, including media queries */
 
 /* Section specific styling for #how-colleen-helps */
@@ -409,29 +496,37 @@
   </nav>
 
   <section class="hero" data-zone="hero" data-zone-label="Hero" id="hero">
-    <div class="container">
-      <div class="hero-two-col">
-        <div>
-          <span class="section-label" data-editable="">Osteopathy · Pain Education · Movement</span>
-          <h1 data-animate="" data-delay="1" data-editable="" class="in-view">
-            <span class="hero-h1-part1" data-editable="">Your pain has a story.</span> 
-            <span class="hero-h1-part2" data-editable="">You deserve</span> 
-            <span class="hero-h1-part3" data-editable="">to understand it.</span>
-          </h1>
-          <p class="lead" data-editable="">Colleen Jorgensen brings together 28 years of hands-on osteopathic care, pain science education, and movement to help people understand their symptoms, rebuild confidence, and live more fully.&nbsp; She is the creator of the DARE to Heal pain care program.</p>
-          <div class="btn-group">
-            <a href="./work-with-me.html" class="btn btn-primary" data-editable="">Explore Ways to Work Together</a>
-            <a href="./about.html" class="btn btn-outline" data-editable="">Learn About Colleen</a>
-          </div>
+  <div class="container">
+    <div class="hero-two-col">
+      <div class="hero-content-left">
+        <span class="section-label" data-editable="">Osteopathy · Pain Education · Movement</span>
+        <h1 data-editable="">
+          <span class="hero-h1-part1" data-editable="">Your pain has a story.</span>
+          <span class="hero-h1-part2" data-editable="">You deserve</span>
+          <span class="hero-h1-part3" data-editable="">to understand it.</span>
+        </h1>
+        <p class="lead" data-editable="">Colleen Jorgensen brings together 28 years of hands-on osteopathic care, pain science education, and movement to help people understand their symptoms, rebuild confidence, and live more fully. She is the creator of the DARE to Heal pain care program.</p>
+        
+        <div class="btn-group">
+          <a href="./work-with-me.html" class="btn btn-primary" data-editable="">Explore Ways to Work Together</a>
+          <a href="./about.html" class="btn btn-outline" data-editable="">Learn About Colleen</a>
         </div>
-        <div>
-          <div class="hero-image-container">
-            <img src="./assets/colleen.png" data-editable-image="" alt="Colleen Jorgensen, osteopath and movement specialist" style="cursor: pointer;">
-          </div>
+
+        <div class="hero-socials">
+          <a href="#https://www.facebook.com/stillnessinmotionwithcolleen" class="social-btn" data-editable="">facebook</a>
+          <a href="#https://www.instagram.com/_stillnessinmotion/" class="social-btn" data-editable="">Instagram</a>
+          <a href="#https://www.youtube.com/@stillnessinmotionwithcolle8871" class="social-btn" data-editable="">YouTube</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-container">
+          <img src="./assets/colleen.png" data-editable-image="" alt="Colleen Jorgensen, osteopath and movement specialist" style="cursor: pointer;">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="section" data-zone="who-this-is-for" data-zone-label="Who This Is For" id="who-this-is-for" style="position: relative;">
     <div class="container">
@@ -443,7 +538,7 @@
         <div class="card card-alt card-fixed-height-content">
           <div class="card-icon">🧍</div>
           <div class="card-title-wrapper">
-            <h3 data-editable="" class="card-title-custom"><span data-gitqi-style="" style="font-size: 1.25em;">You're living with persistent pain</span></h3>
+            <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You're living with persistent pain</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
             <p data-editable="">You've tried treatments and still feel stuck. You're ready for a deeper understanding of what's driving your pain and a clear, supported path forward.</p>
@@ -452,7 +547,7 @@
         <div class="card card-alt card-fixed-height-content">
           <div class="card-icon">🌿</div>
           <div class="card-title-wrapper">
-            <h3 data-editable="" class="card-title-custom"><span data-gitqi-style="" style="font-size: 1.25em;">You want to move again</span></h3>
+            <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You want to move again</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
             <p data-editable="">You are ready to rebuild trust with your body, with less fear, more ease, and a clearer sense of what both your body and your nervous system actually need.</p>
@@ -461,7 +556,7 @@
         <div class="card card-alt card-fixed-height-content">
           <div class="card-icon">🎓</div>
           <div class="card-title-wrapper">
-            <h3 data-editable="" class="card-title-custom"><span data-gitqi-style="" style="font-size: 1.25em;">You're a&nbsp; professional seeking depth</span></h3>
+            <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You're a&nbsp; professional seeking depth</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
             <p data-editable="">You want to integrate pain neuroscience and osteopathic thinking into your practice in ways that are grounded, practical, and clinically transferable.</p>
@@ -470,7 +565,7 @@
         <div class="card card-alt card-fixed-height-content">
           <div class="card-icon">🎤</div>
           <div class="card-title-wrapper">
-            <h3 data-editable="" class="card-title-custom"><span data-gitqi-style="" style="font-size: 1.25em;">You need a credible, compelling voice</span></h3>
+            <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You need a credible, compelling voice</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
             <p data-editable="">For your event, training,&nbsp; or podcast - someone who speaks about pain and healing with authority, warmth, and genuine accessibility.</p>
