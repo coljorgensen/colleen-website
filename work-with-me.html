@@ -187,83 +187,77 @@ section[data-zone="osteopathy"] .btn {
 
 .movement-content .btn {
   margin-top: var(--space-md);
-}</style><style id="__gitqi-section-workshops-styles">.category-group {
+}</style><style id="__gitqi-section-workshops-styles">/* All CSS needed for this section, including media queries */
+
+/* Styles for .category-group */
+.category-group {
     margin-top: var(--space-xl);
 }
 
 .category-group h3 {
     margin-bottom: var(--space-lg);
     text-align: center;
+    /* Bolding category titles */
+    font-weight: 600; /* Made category titles bold as part of general bolding theme */
+    color: var(--color-primary); /* Ensure it's primary color, as h3 generally is */
 }
 
+/* Ensure section-header p is centered with max-width */
 .section-header p {
     margin-left: auto;
     margin-right: auto;
+    /* max-width is already in global CSS for section-header p */
+    /* text-align: center; is already on .section-header */
 }
 
+/* Pathway Card Overrides & Enhancements */
+/* These are specific overrides for the .pathway-card properties already defined in global CSS */
 .pathway-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: var(--color-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform .2s, box-shadow .2s;
+    height: 100%; /* Ensure all cards in a grid have equal height */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack contents vertically */
+    /* The rest (background, border-radius, overflow, box-shadow, transition) are already in the global .pathway-card */
 }
 
-.pathway-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(42,31,26,.12);
-}
-
+/* Pathway Card Image Overrides */
 .pathway-card-img {
-    position: relative;
-    background: var(--color-bg-alt);
-    height: 190px;
-    overflow: hidden;
+    position: relative; /* Needed if any absolute positioning is used inside later, otherwise default block flow */
+    /* background, height, overflow are already in the global .pathway-card-img */
 }
 
 .pathway-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
+    cursor: pointer; /* From existing inline style, made it a class property */
+    /* width, height, object-fit are already in the global .pathway-card-img img */
 }
 
+/* Pathway Card Body Overrides & Enhancements */
 .pathway-card-body {
-    padding: var(--space-md);
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    padding: var(--space-md); /* Already in global .pathway-card-body */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack contents vertically */
+    flex: 1; /* Allow body to grow and fill available space, pushing link to bottom */
 }
 
 .pathway-card-body h3 {
-    margin-bottom: var(--space-xs);
-    font-size: 1.3rem;
-    line-height: 1.3;
+    margin-bottom: var(--space-xs); /* Already in global .pathway-card-body h3 */
+    font-size: 1.3rem; /* Specific font size for card titles */
+    line-height: 1.3; /* Specific line height for card titles */
+    /* Instruction: bold the titles of each workshop */
+    font-weight: 600; /* Apply bolding to workshop titles */
 }
 
-.pathway-card-body p {
-    font-size: .93rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
-}
-
+/* Pathway Card Link Overrides & Enhancements */
 .pathway-card-body .card-link {
-    margin-top: auto;
-    display: inline-block;
-    font-size: .88rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    transition: color 0.2s;
+    margin-top: auto; /* Push the link to the bottom of the card body */
+    /* display, font-size, font-weight, color are already in global .card-link */
 }
 
 .pathway-card-body .card-link:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
+    color: var(--color-primary); /* Specific hover color for these links */
+    /* text-decoration is already in global .card-link:hover */
 }
 
+/* Media Queries */
 @media (max-width: 600px) {
     .category-group h3 {
         margin-bottom: var(--space-md);
@@ -309,6 +303,26 @@ section[data-zone="osteopathy"] .btn {
   #work-cta .btn {
     width: 100%;
   }
+}</style><style id="__gitqi-section-aquatic-osteopathy-styles">#aquatic-osteopathy {
+    position: relative;
+}
+
+.aquatic-osteopathy-content-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.aquatic-osteopathy-content-grid img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+@media(max-width: 768px){
+    .aquatic-osteopathy-content-grid{
+        grid-template-columns: 1fr;
+    }
 }</style></head>
 <body style="">
   <nav id="main-nav" style="">
@@ -391,23 +405,20 @@ section[data-zone="osteopathy"] .btn {
         </div>
       </div>
     </div>
-  </section><section class="section" data-zone="aquatic-osteopathy" data-zone-label="Aquatic Osteopathy" id="aquatic-osteopathy" style="position: relative;">
+  </section><section class="section" data-zone="aquatic-osteopathy" data-zone-label="Aquatic Osteopathy" id="aquatic-osteopathy">
     <div class="container">
-        <div class="grid-2">
+        <div class="aquatic-osteopathy-content-grid">
             <div>
                 <span class="section-label" data-editable="">Summer only</span>
                 <h2 data-editable="">Aquatic Osteopathy</h2>
                 <p class="text-muted" data-editable="">Booking soon for the 2026 summer season.</p>
-                <p data-editable=""></p><div>Aquatic osteopathy takes place in a warm, body-temperature pool where the body is fully supported by water and gentle flotation.</div><div>This reduces the effects of gravity, allowing for effortless movement and a deeper level of ease in the system. The combination of warmth, buoyancy, and subtle manual guidance makes this approach particularly comfortable for people living with pain, while still allowing for meaningful therapeutic work.<br><br>Summer dates and location to come<br><br>
-
-
-
-
-
-
-
-<p class="p1"><i>Aquatic sessions are currently offered to existing clients as part of an ongoing course of care.</i></p></div><p></p>
-                <a href="#" class="btn btn-primary" data-editable="">Join the Waitlist</a>
+                <p data-editable=""></p>
+                <p data-editable="">Aquatic osteopathy takes place in a residential, outdoor body-temperature pool (92-95 degrees).&nbsp; Your body is fully supported by Colleen, the water and gentle flotation props.</p>
+                <p data-editable="">Water sessions reduce the effects of gravity, allowing for effortless movement and a deeper level of ease in the system. The combination of warmth, buoyancy, support, care and manual techniques makes this approach particularly comfortable &amp; effective for people living with pain.&nbsp; Aquatic Osteopathy is a unique experience that offers deep, meaningful, therapeutic work.</p>
+                <p data-editable="">Sessions will be offered from June - September in Dollard des Ormeaux, Qc.</p>
+                <p data-editable=""><i>Aquatic sessions are currently offered to existing clients only as part of an ongoing course of care.&nbsp; If you are a new clients, click the button below and Colleen will be in touch.</i></p>
+                <p data-editable=""></p>
+                <a href="#" class="btn btn-primary"><span data-editable="">Join the Waitlist</span></a>
             </div>
             <div style="position: relative;">
                 <img src="./assets/IMG_5964.JPEG" alt="Person receiving aquatic osteopathy" data-editable-image="" style="cursor: pointer;">
@@ -421,7 +432,7 @@ section[data-zone="osteopathy"] .btn {
       <div class="section-header text-center">
         <span class="section-label" data-editable="">Learn at Your Own Pace</span>
         <h2 data-editable="">Workshops &amp; Online Courses</h2>
-        <p data-editable="">At the heart of these offerings is the idea of Stillness in Motion—the ability to find steadiness within movement, and flow within the stillness. Through strength, self-treatment, fascial work, and movement practices you begin to develop a more responsive, adaptable relationship with your body.</p>
+        <p data-editable="">At the heart of these offerings is the idea of <strong>Stillness in Motion</strong>—the ability to find steadiness within movement, and flow within the stillness. Through strength, self-treatment, fascial work, and movement practices you begin to develop a more responsive, adaptable relationship with your body.</p>
       </div>
 
       <!-- Category 1: Start Here -->
@@ -435,7 +446,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Shaping Your Nervous System: Stretch it don't stress it.</h3>
               <p data-editable="">A self-paced workshop exploring the connection between jaw tension, the nervous system, and whole-body patterns. Practical and clear, with tools you can apply right immediately.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -445,7 +456,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Embody the Anatomy of Breath</h3>
               <p data-editable="">An educational course for people who want to understand what pain actually is, how it works in the nervous system, and what that means for recovery and daily life.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details→</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details→</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -455,7 +466,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Fascia: Aging, Pain and Movement</h3>
               <p data-editable="">Short, practical movement and awareness sessions for building a sustainable practice around sensation, rest, and regulation. Suitable for all levels.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/53791/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/53791/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -465,7 +476,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Delicious Spine</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -480,9 +491,9 @@ section[data-zone="osteopathy"] .btn {
               <img src="./assets/handsheart 2.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">The Nervous System Updated:&nbsp;<span style="font-size: 22.96px;">An Embodied Polyvagal Conversation</span></h3>
+              <h3 data-editable="">The Nervous System Updated:&nbsp;An Embodied Polyvagal Conversation</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/92908/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/92908/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -492,7 +503,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Awaken to the Art of Breathing</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/68473/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/68473/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -502,7 +513,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Hybrid Hugs</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/60800/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/60800/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -512,7 +523,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Shaping Your Nervous System</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -522,7 +533,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Befriend</h3>
               <p data-editable="">Explore advanced techniques for co-regulation and self-regulation within the polyvagal framework. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -532,7 +543,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Dare to Breathe</h3>
               <p data-editable="">A focused look at vagal tone and its impact on digestion, heart rate, and emotional resilience. This text is editable.</p>
-              <a href="##https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -549,7 +560,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Yamas and Niyamas</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/56511/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/56511/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -559,7 +570,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Sleep Solutions</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -569,7 +580,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Embodying the Anatomy of Breath</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -579,7 +590,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Chasing Happiness: Should we?</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/76770/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/76770/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -596,7 +607,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">For the Love of Feet</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/59580/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/59580/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -606,7 +617,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Eyes: Windows to your soul, extension of your brain</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/58600/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/58600/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -616,7 +627,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Its All About Balance</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/71028/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/71028/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -626,7 +637,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Move</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/51593/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/51593/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -636,7 +647,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Neuro Playground</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/92380/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/92380/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -646,7 +657,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Unkink your Think</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/92152/about#" class="card-link">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/92152/about" class="card-link">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -656,7 +667,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Unbound</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/88168/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/88168/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -666,7 +677,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Cross the Midline</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/84279/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/84279/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -676,7 +687,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Soma Flow: Boundaries &amp; Support</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/79057/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/79057/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -686,7 +697,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Yoga Flow:<br>Pelvic floor and Fall prevention</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/78797/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/78797/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -696,7 +707,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Delicious Spine</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="##https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -706,7 +717,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">CORE BASICS</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/79110/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/79110/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -716,7 +727,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Restorative Yoga with Self Osteopathy</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -726,7 +737,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Floss n'&nbsp; FLow</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="##https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -743,7 +754,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Jaw: An Osteopathic Approach</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -753,7 +764,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Gua Sha: An Osteopathic Approach</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -763,7 +774,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Gut Brain Heart Connection and Celebration</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/66530/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/66530/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -773,7 +784,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">TLC for your Gut</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/68453/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/68453/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -783,7 +794,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Lungs: Wring the Out!</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/53536/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/53536/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -793,7 +804,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Treat Yourself</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/43566/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43566/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -801,9 +812,9 @@ section[data-zone="osteopathy"] .btn {
               <img src="./assets/hut 2.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">Restorative Yoga with Self Osteopathy Yoga</h3>
+              <h3 data-editable="">Restorative Yoga with&nbsp; Osteopathic <br>Self-Release</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="##https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -820,7 +831,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Fascial Flossing for Lymphatic Flow 1</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/64704/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/64704/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -830,7 +841,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Fascial Flossing for Lymphatic Flow 2</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/65221/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/65221/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -840,7 +851,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Fascia - Aging, Pain and Movement</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/53791/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/53791/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -850,7 +861,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Floss n' Flow</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
             </div>
           </div>
         </div>
@@ -867,7 +878,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Free Pain Care Tools</h3>
               <p data-editable="">In-depth training for professionals looking to enhance their skills and knowledge in therapeutic practices. This course focuses on advanced techniques.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/43561/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details→</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43561/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details→</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -877,7 +888,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Care</h3>
               <p data-editable="">A comprehensive program designed for healthcare professionals to integrate new evidence-based approaches into their existing practice. Includes case studies.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/41282/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/41282/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -887,7 +898,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to be Curious</h3>
               <p data-editable="">Focuses on clinical applications and advanced reasoning for complex patient presentations. Ideal for experienced practitioners seeking specialization.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/30344/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/30344/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -897,7 +908,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Sleep Solutions</h3>
               <p data-editable="">Exploring ethical considerations and communication strategies for effective client engagement and improved outcomes. Interactive sessions included.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -907,7 +918,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Nourish to Flourish with Paola DeCicco</h3>
               <p data-editable="">A focused guide on recovery strategies, blending movement with neurological insights to help manage chronic patterns. This text is editable.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/90036/about" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/90036/about" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
         </div>
@@ -924,7 +935,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Move</h3>
               <p data-editable="">A 14 class series</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/51593/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/51593/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -934,7 +945,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Befriend</h3>
               <p data-editable="">Small group sessions focusing on specific wellness topics, allowing for shared learning and support in a facilitated environment.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -944,7 +955,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Breathe</h3>
               <p data-editable="">Bespoke programs for businesses seeking to improve employee well-being, reduce stress, and foster a healthier work environment.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -954,7 +965,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to be Curious</h3>
               <p data-editable="">Ongoing guidance and mentorship for individuals committed to sustained personal growth and mastery of their health journey.</p>
-              <a href="#https://stillness-in-motion.heymarvelous.com/product/30344/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/30344/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <!-- New Box 1 -->
@@ -965,7 +976,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Treat Yourself</h3>
               <p data-editable="">Experience restorative movement and nervous system regulation techniques designed to bring balance back to your everyday life.</p>
-              <a href="##https://stillness-in-motion.heymarvelous.com/product/43566/about" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43566/about" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
           <!-- New Box 2 -->
@@ -976,7 +987,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Care</h3>
               <p data-editable="">Build upon the foundations of the DARE series with advanced exploration into somatic awareness and resilient living.</p>
-              <a href="#" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/41282/about" class="card-link" data-editable="" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
         </div>
