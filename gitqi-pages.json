@@ -1,9 +1,44 @@
 {
   "pages": [
     {
+      "file": "index.html",
+      "title": "Home",
+      "navLabel": "Home"
+    },
+    {
       "file": "about.html",
-      "title": "About — Colleen Jorgensen, D.O.",
-      "navLabel": "About — Colleen Jorgensen, D.O."
+      "title": "About",
+      "navLabel": "About"
+    },
+    {
+      "file": "work-with-me.html",
+      "title": "Services",
+      "navLabel": "Work With Me"
+    },
+    {
+      "file": "dare.html",
+      "title": "D.A.R.E to Heal",
+      "navLabel": "D.A.R.E to Heal"
+    },
+    {
+      "file": "training.html",
+      "title": "Training",
+      "navLabel": "Trainings"
+    },
+    {
+      "file": "speaking.html",
+      "title": "Speaking",
+      "navLabel": "Speaking"
+    },
+    {
+      "file": "resources.html",
+      "title": "Free Resources",
+      "navLabel": "Free Resources"
+    },
+    {
+      "file": "contact.html",
+      "title": "Contact",
+      "navLabel": "Contact"
     }
   ]
 }
