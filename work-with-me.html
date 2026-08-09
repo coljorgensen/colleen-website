@@ -187,9 +187,7 @@ section[data-zone="osteopathy"] .btn {
 
 .movement-content .btn {
   margin-top: var(--space-md);
-}</style><style id="__gitqi-section-workshops-styles">/* All CSS needed for this section, including media queries */
-
-/* Styles for .category-group */
+}</style><style id="__gitqi-section-workshops-styles">/* all CSS needed for this section, including media queries */
 .category-group {
     margin-top: var(--space-xl);
 }
@@ -197,67 +195,45 @@ section[data-zone="osteopathy"] .btn {
 .category-group h3 {
     margin-bottom: var(--space-lg);
     text-align: center;
-    /* Bolding category titles */
-    font-weight: 600; /* Made category titles bold as part of general bolding theme */
-    color: var(--color-primary); /* Ensure it's primary color, as h3 generally is */
-}
-
-/* Ensure section-header p is centered with max-width */
-.section-header p {
-    margin-left: auto;
-    margin-right: auto;
-    /* max-width is already in global CSS for section-header p */
-    /* text-align: center; is already on .section-header */
+    font-weight: 600; /* Bolding category titles */
+    color: var(--color-primary);
 }
 
 /* Pathway Card Overrides & Enhancements */
-/* These are specific overrides for the .pathway-card properties already defined in global CSS */
 .pathway-card {
     height: 100%; /* Ensure all cards in a grid have equal height */
     display: flex; /* Make it a flex container */
     flex-direction: column; /* Stack contents vertically */
-    /* The rest (background, border-radius, overflow, box-shadow, transition) are already in the global .pathway-card */
 }
 
-/* Pathway Card Image Overrides */
 .pathway-card-img {
-    position: relative; /* Needed if any absolute positioning is used inside later, otherwise default block flow */
-    /* background, height, overflow are already in the global .pathway-card-img */
+    position: relative; /* Consistent with previous setup */
 }
 
 .pathway-card-img img {
-    cursor: pointer; /* From existing inline style, made it a class property */
-    /* width, height, object-fit are already in the global .pathway-card-img img */
+    cursor: pointer; /* Apply cursor style from previous inline styles */
 }
 
-/* Pathway Card Body Overrides & Enhancements */
 .pathway-card-body {
-    padding: var(--space-md); /* Already in global .pathway-card-body */
     display: flex; /* Make it a flex container */
     flex-direction: column; /* Stack contents vertically */
     flex: 1; /* Allow body to grow and fill available space, pushing link to bottom */
 }
 
 .pathway-card-body h3 {
-    margin-bottom: var(--space-xs); /* Already in global .pathway-card-body h3 */
     font-size: 1.3rem; /* Specific font size for card titles */
     line-height: 1.3; /* Specific line height for card titles */
-    /* Instruction: bold the titles of each workshop */
     font-weight: 600; /* Apply bolding to workshop titles */
 }
 
-/* Pathway Card Link Overrides & Enhancements */
 .pathway-card-body .card-link {
     margin-top: auto; /* Push the link to the bottom of the card body */
-    /* display, font-size, font-weight, color are already in global .card-link */
 }
 
 .pathway-card-body .card-link:hover {
     color: var(--color-primary); /* Specific hover color for these links */
-    /* text-decoration is already in global .card-link:hover */
 }
 
-/* Media Queries */
 @media (max-width: 600px) {
     .category-group h3 {
         margin-bottom: var(--space-md);
@@ -458,9 +434,9 @@ section[data-zone="osteopathy"] .btn {
               <img src="./assets/ropes.jpeg" alt="Understanding Jaw Pain Workshop" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">Shaping Your Nervous System: Stretch it don't stress it.</h3>
-              <p data-editable="">A self-paced workshop exploring the connection between jaw tension, the nervous system, and whole-body patterns. Practical and clear, with tools you can apply right immediately.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <h3 data-editable="">Shaping Your <br>Nervous System: <br>Stretch it don't stress it.</h3>
+              <p>This workshop teaches you&nbsp; to recognize and embody the different nervous system states. Based on the work of Dr. Arielle Schwartz, Deb Dana and Stephen Porges, and Colleen's Osteopathic perspective, learn practices &amp; tools to build capacity and resilience you&nbsp;<span style="font-size: 0.93rem;">can apply immediately.</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/60376" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -468,9 +444,9 @@ section[data-zone="osteopathy"] .btn {
               <img src="./assets/Embody_breath.jpeg" alt="Pain Care Foundations Course" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">Embody the Anatomy of Breath</h3>
-              <p data-editable="">An educational course for people who want to understand what pain actually is, how it works in the nervous system, and what that means for recovery and daily life.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details→</a>
+              <h3 data-editable="">Embodying the Anatomy of Breath</h3>
+              <p data-editable="">In this workshop, we combine theory and practice as we look at the anatomy of the breath.&nbsp; The diaphragm is connected to just about every system in our bodies so the breath has the potential to affect and influence every single system in our bodies.&nbsp; Learn to use it to your advantage!</p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/82753" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -479,8 +455,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Fascia: Aging, Pain and Movement</h3>
-              <p data-editable="">Short, practical movement and awareness sessions for building a sustainable practice around sensation, rest, and regulation. Suitable for all levels.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/53791/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
+              <p data-editable=""><p>It is a myth to expect pain &amp; dysfunction as you age.</p><p><span style="font-size: 0.93rem;">You have the</span><b style="font-size: 0.93rem;"> power to influence your fascia every day.</b></p><p>Hear the <b>latest scientific findings</b> in fascia, aging and pain and enjoy being guided&nbsp; through <b>movements that counteract</b>&nbsp;normal age-related changes.&nbsp;</p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/53791" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -489,8 +465,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Delicious Spine</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><p><span style="font-size: 0.93rem;">Feel the muscles around your spine</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">soften &amp;</b><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">melt</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">from the</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">simple, delicious movement</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">in this class!&nbsp; T</span><span style="font-size: 0.93rem;">his class sequence is the closest thing to giving yourself</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">your own Osteopathic treatment! In</b>&nbsp;this 1hr somatic class you<span style="font-size: 0.93rem;">&nbsp;will </span><b style="font-size: 0.93rem;">nourish and mobilize</b><span style="font-size: 0.93rem;"> the spine using a deflated&nbsp; ball.</span></p><p></p><p><br></p><p><br></p><p><br></p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/77614" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
         </div>
@@ -1067,7 +1043,7 @@ section[data-zone="osteopathy"] .btn {
         <a href="./index.html" data-editable="">Home</a>
         <a href="./about.html" data-editable="">About</a>
         <a href="./work-with-me.html" data-editable="">Work With Me</a>
-        <a href="./dare.html" data-editable="">D.A.R.E. to Heal</a>
+        <a href="./dare.html" data-editable="">DARE to Heal</a>
         <a href="./training.html" data-editable="">Trainings</a>
         <a href="./speaking.html" data-editable="">Speaking</a>
         <a href="./resources.html" data-editable="">Free Resources</a>
