@@ -135,15 +135,146 @@
   </style>
   
   
-<style id="__gitqi-section-osteopathy-styles">/* Styles for the Osteopathy section */
+<style id="__gitqi-section-osteopathy-styles">/* all CSS needed for this section, including media queries */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+:root{--color-primary:#5C4033;--color-secondary:#8B6F5E;--color-accent:#C17F5A;--color-bg:#FAF7F2;--color-bg-alt:#F2EDE4;--color-text:#2A1F1A;--color-text-muted:#7A6155;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--container-width:1100px;--radius:12px;--shadow:0 4px 24px rgba(42,31,26,0.08);--color-accent-soft:#E4C7A8;--color-blush:#D4937A;--color-border:#DDD0C0;  --font-dare: 'Roboto', system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;scroll-behavior:smooth;}
+body{font-family:var(--font-body);font-weight:300;background:var(--color-bg);color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+.container{width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);}
+h1,h2,h3,h4,h5{font-family:var(--font-heading);line-height:1.2;color:var(--color-primary);}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:300;}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:300;}
+h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:400;}
+h4{font-size:1.05rem;font-weight:400;}
+p{margin-bottom:var(--space-sm);}
+p:last-child{margin-bottom:0;}
+.section-label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-xs);display:block;}
+.btn{display:inline-block;padding:.8rem 1.8rem;border-radius:50px;font-family:var(--font-body);font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s ease;border:2px solid transparent;text-align:center;}
+.btn-primary{background:var(--color-accent);color:#fff;border-color:var(--color-accent);}
+.btn-primary:hover{background:var(--color-primary);border-color:var(--color-primary);}
+.btn-outline{background:transparent;color:var(--color-accent);border-color:var(--color-accent);}
+.btn-outline:hover{background:var(--color-accent);color:#fff;}
+.btn-secondary{background:var(--color-secondary);color:#fff;border-color:var(--color-secondary);}
+.btn-secondary:hover{background:#627058;border-color:#627058;}
+.btn-white{background:#fff;color:var(--color-accent);border-color:#fff;}
+.btn-white:hover{background:var(--color-bg-alt);}
+#main-nav{position:sticky;top:0;z-index:1000;background:var(--color-bg);border-bottom:1px solid var(--color-border);box-shadow:0 2px 12px rgba(42,31,26,.06);}
+.nav-inner{max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;height:70px;}
+.nav-logo{font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--color-text);white-space:nowrap;line-height:1.2;}
+.nav-logo span{display: block;font-family: var(--font-body);font-size: 0.68rem;font-weight: 400;letter-spacing: 0.10em;text-transform: uppercase;color: var(--color-text-muted);}
+.nav-links{display:flex;align-items:center;gap:1.1rem;}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--color-text-muted);transition:color .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:var(--color-primary);}
+.nav-links .nav-cta{background:var(--color-accent);color:#fff !important;padding:.45rem 1.1rem;border-radius:50px;}
+.nav-links .nav-cta:hover{background:var(--color-primary) !important;}
+.hamburger{display:none;flex-direction:column;justify-content:space-around;width:28px;height:22px;background:none;border:none;cursor:pointer;padding:0;z-index:9001;flex-shrink:0;}
+.hamburger span{display:block;width:100%;height:2px;background:var(--color-text);border-radius:2px;transition:all .3s ease;}
+@media(max-width:960px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:var(--color-bg);flex-direction:column;align-items:flex-start;gap:0;padding:var(--space-xs) 0;border-bottom:2px solid var(--color-border);box-shadow:0 8px 24px rgba(42,31,26,.1);z-index:9000;overflow-y:auto;max-height:calc(100vh - 70px);}
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;padding:.85rem var(--space-md);font-size:1rem;border-bottom:1px solid var(--color-border);}
+  .nav-links .nav-cta{margin:var(--space-sm) var(--space-md);display:inline-block;border-radius:50px;}
+}
+footer{background:#2E211A;color:rgba(255,255,255,.85);padding:var(--space-xl) 0 var(--space-md);}
+.footer-inner{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:var(--space-lg);padding-bottom:var(--space-lg);border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-brand strong{font-family:var(--font-heading);font-size:1.05rem;font-weight:400;color:#fff;display:block;margin-bottom:var(--space-xs);}
+.footer-brand p{color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:.25rem;}
+.footer-nav{display:flex;flex-direction:column;gap:.5rem;}
+.footer-nav a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
+.footer-nav a:hover{color:var(--color-accent);}
+.footer-contact a{color:rgba(255,255,255,.6);font-size:.875rem;display:block;margin-bottom:.5rem;transition:color .2s;}
+.footer-contact a:hover{color:var(--color-accent);}
+.social-links{display:flex;gap:1rem;margin-top:var(--space-sm);flex-wrap:wrap;}
+.social-links a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
+.social-links a:hover{color:var(--color-accent);}
+.footer-bottom{text-align:center;padding-top:var(--space-md);}
+.footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem;margin:0;}
+@media(max-width:700px){.footer-inner{grid-template-columns:1fr;gap:var(--space-md);}}
+.section{padding:var(--space-xl) 0;}
+.section-alt{background:var(--color-bg-alt);}
+.section-dark{background:#2E211A;}
+.section-dark h2,.section-dark h3,.section-dark h4{color:#fff;}
+.section-dark p,.section-dark li{color:rgba(255,255,255,.72);}
+.section-dark .section-label{color:var(--color-accent);}
+.section-primary{background:var(--color-primary);}
+.section-primary h2,.section-primary h3,.section-primary p{color:#fff;}
+.section-primary .section-label{color:var(--color-accent-soft);}
+.section-header{margin-bottom:var(--space-lg);}
+.section-header p{color:var(--color-text-muted);max-width:600px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-md);}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+.card{background:var(--color-bg);border-radius:var(--radius);padding:var(--space-md);box-shadow:var(--shadow);}
+.card-alt{background:var(--color-bg-alt);box-shadow:none;border:1px solid var(--color-border);}
+.card h3,.card h4{margin-bottom:var(--space-xs);}
+.card p{color:var(--color-text-muted);font-size:.93rem;}
+.card-icon{width:48px;height:48px;border-radius:12px;background:var(--color-accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-sm);font-size:1.4rem;}
+.card-link{display:inline-block;margin-top:var(--space-sm);font-size:.88rem;font-weight:600;color:var(--color-accent);}
+.card-link:hover{text-decoration:underline;}
+.testimonial{background:var(--color-bg);border-left:4px solid var(--color-accent);padding:var(--space-md);border-radius:0 var(--radius) var(--radius) 0;}
+.testimonial blockquote{font-style:italic;font-size:.97rem;line-height:1.75;color:var(--color-text);margin-bottom:var(--space-xs);}
+.testimonial cite{font-size:.82rem;font-weight:600;color:var(--color-text-muted);font-style:normal;}
+.cta-section{background:var(--color-bg-alt);padding:var(--space-xl) 0;text-align:center;}
+.cta-section h2{margin-bottom:var(--space-sm);}
+.cta-section p{color:var(--color-text-muted);max-width:540px;margin:0 auto var(--space-lg);}
+.text-center{text-align:center;}
+.text-muted{color:var(--color-text-muted);}
+.highlight{color:var(--color-accent);}
+.divider{border:none;border-top:1px solid var(--color-border);margin:var(--space-lg) 0;}
+.pill{display:inline-block;background:rgba(228,199,168,.5);color:var(--color-accent);padding:.28rem .8rem;border-radius:50px;font-size:.77rem;font-weight:600;}
+.pill-teal{background:rgba(212,147,122,.2);color:var(--color-blush);}
+.stat-box{text-align:center;padding:var(--space-md);}
+.stat-number{font-family:var(--font-heading);font-size:2.8rem;font-weight:300;color:var(--color-accent);line-height:1;display:block;}
+.stat-label{font-size:.88rem;color:var(--color-text-muted);margin-top:.25rem;display:block;}
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:var(--color-border);}
+.timeline-item{position:relative;margin-bottom:var(--space-md);}
+.timeline-item::before{content:'';position:absolute;left:-1.6rem;top:.48rem;width:12px;height:12px;border-radius:50%;background:var(--color-accent);}
+.timeline-item h4{margin-bottom:.25rem;}
+.timeline-item p{font-size:.9rem;color:var(--color-text-muted);}
+.faq-item{border-bottom:1px solid var(--color-border);padding:var(--space-sm) 0;}
+.faq-q{font-weight:600;font-size:1rem;margin-bottom:.4rem;color:var(--color-text);}
+.faq-a{color:var(--color-text-muted);font-size:.93rem;}
+.pathway-card{background:var(--color-bg);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
+.pathway-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(42,31,26,.12);}
+.pathway-card-img{height:190px;overflow:hidden;background:var(--color-bg-alt);}
+.pathway-card-img img{width:100%;height:100%;object-fit:cover;}
+.pathway-card-body{padding:var(--space-md);}
+.pathway-card-body h3{margin-bottom:var(--space-xs);}
+.pathway-card-body p{font-size:.93rem;color:var(--color-text-muted);margin-bottom:var(--space-sm);}
+.btn-group{display:flex;gap:var(--space-sm);flex-wrap:wrap;}
+.hero{padding:var(--space-xl) 0;background:var(--color-bg-alt);}
+.hero h1{margin-bottom:var(--space-sm);}
+.hero .lead{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);max-width:580px;}
+.hero-two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;}
+@media(max-width:768px){.hero-two-col{grid-template-columns:1fr;}}
+.check-list{display:flex;flex-direction:column;gap:.65rem;}
+.check-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem;color:var(--color-text-muted);}
+.check-list li::before{content:'\2713';color:var(--color-primary);font-weight:700;flex-shrink:0;}
+.num-circle{background:var(--color-primary);color:#fff;font-family:var(--font-heading);font-size:1.3rem;font-weight:700;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.num-circle-teal{background:var(--color-blush);}
+@media print{#main-nav,footer{display:none;}}
+
+/* Styles for the Osteopathy section */
+section[data-zone="osteopathy"] {
+    position: relative; /* Moved from inline style */
+}
 .osteopathy-image-wrapper {
     border-radius: var(--radius);
     overflow: hidden;
     min-height: 380px; /* Preserve original min-height */
     background: var(--color-bg-alt);
-    position: relative; /* Preserve original position: relative from inline style */
+    position: relative; /* Preserve original position: relative from inline style (though originally on section) */
 }
-
 .osteopathy-image-wrapper img {
     width: 100%;
     height: 100%;
@@ -151,18 +282,15 @@
     min-height: 380px; /* Preserve original min-height */
     cursor: pointer; /* Preserve original cursor: pointer from inline style */
 }
-
 /* Apply specific grid styles for this section, converting inline styles to CSS */
 section[data-zone="osteopathy"] .grid-2 {
     align-items: center;
     gap: var(--space-xl);
 }
-
 /* Apply specific margin for the check-list, converting inline styles to CSS */
 section[data-zone="osteopathy"] .check-list {
     margin-top: var(--space-md);
 }
-
 /* Apply specific margin for the button, converting inline styles to CSS */
 section[data-zone="osteopathy"] .btn {
     margin-top: var(--space-md);
@@ -188,6 +316,10 @@ section[data-zone="osteopathy"] .btn {
 .movement-content .btn {
   margin-top: var(--space-md);
 }</style><style id="__gitqi-section-workshops-styles">/* all CSS needed for this section, including media queries */
+section[data-zone="workshops"] {
+    position: relative;
+}
+
 .category-group {
     margin-top: var(--space-xl);
 }
@@ -196,7 +328,6 @@ section[data-zone="osteopathy"] .btn {
     margin-bottom: var(--space-lg);
     text-align: center;
     font-weight: 600; /* Bolding category titles */
-    color: var(--color-primary);
 }
 
 /* Pathway Card Overrides & Enhancements */
@@ -224,6 +355,13 @@ section[data-zone="osteopathy"] .btn {
     font-size: 1.3rem; /* Specific font size for card titles */
     line-height: 1.3; /* Specific line height for card titles */
     font-weight: 600; /* Apply bolding to workshop titles */
+    /* margin-bottom is inherited from .card h3 which is var(--space-xs) */
+}
+
+.pathway-card-body p { /* Ensure existing p styles are kept for general paragraphs in cards */
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: .93rem;
 }
 
 .pathway-card-body .card-link {
@@ -233,6 +371,25 @@ section[data-zone="osteopathy"] .btn {
 .pathway-card-body .card-link:hover {
     color: var(--color-primary); /* Specific hover color for these links */
 }
+
+/* New CSS for bulleted lists within pathway cards */
+.pathway-card-body .bulleted-list {
+    list-style: disc; /* Display actual disc bullets */
+    padding-left: var(--space-md); /* Indent list items */
+    margin-bottom: var(--space-sm); /* Consistent spacing after the list */
+}
+
+.pathway-card-body .bulleted-list li {
+    margin-bottom: var(--space-xs); /* Space between list items */
+    color: var(--color-text-muted); /* Inherit card text color */
+    font-size: .93rem; /* Inherit card text size */
+    line-height: 1.6; /* Improve readability for list items */
+}
+
+.pathway-card-body .bulleted-list li:last-child {
+    margin-bottom: 0;
+}
+
 
 @media (max-width: 600px) {
     .category-group h3 {
@@ -350,7 +507,7 @@ section[data-zone="osteopathy"] .btn {
 
   
 
-  <section class="section" data-zone="osteopathy" data-zone-label="1:1 Osteopathy" id="osteopathy" style="position: relative;">
+  <section class="section" data-zone="osteopathy" data-zone-label="1:1 Osteopathy" id="osteopathy">
     <div class="container">
       <div class="grid-2">
         <div>
@@ -417,7 +574,7 @@ section[data-zone="osteopathy"] .btn {
     </div>
 </section>
 
-  <section class="section" data-zone="workshops" data-zone-label="Workshops and Courses" id="workshops" style="position: relative;">
+  <section class="section" data-zone="workshops" data-zone-label="Workshops and Courses" id="workshops">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-label" data-editable="">Learn at Your Own Pace</span>
@@ -435,7 +592,7 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Shaping Your <br>Nervous System: <br>Stretch it don't stress it.</h3>
-              <p>This workshop teaches you&nbsp; to recognize and embody the different nervous system states. Based on the work of Dr. Arielle Schwartz, Deb Dana and Stephen Porges, and Colleen's Osteopathic perspective, learn practices &amp; tools to build capacity and resilience you&nbsp;<span style="font-size: 0.93rem;">can apply immediately.</span></p><p></p>
+              <p data-editable="">This workshop teaches you&nbsp; to recognize and embody the different nervous system states. Based on the work of Dr. Arielle Schwartz, Deb Dana and Stephen Porges, and Colleen's Osteopathic perspective, learn practices &amp; tools to build capacity and resilience you&nbsp;<span>can apply immediately.</span></p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/60376" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
@@ -455,7 +612,9 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Fascia: Aging, Pain and Movement</h3>
-              <p data-editable=""><p>It is a myth to expect pain &amp; dysfunction as you age.</p><p><span style="font-size: 0.93rem;">You have the</span><b style="font-size: 0.93rem;"> power to influence your fascia every day.</b></p><p>Hear the <b>latest scientific findings</b> in fascia, aging and pain and enjoy being guided&nbsp; through <b>movements that counteract</b>&nbsp;normal age-related changes.&nbsp;</p></p>
+              <p data-editable="">It is a myth to expect pain &amp; dysfunction as you age.</p>
+              <p data-editable="">You have the<b> power to influence your fascia every day.</b></p>
+              <p data-editable="">Hear the <b>latest scientific findings</b> in fascia, aging and pain and enjoy being guided&nbsp; through <b>movements that counteract</b>&nbsp;normal age-related changes.&nbsp;</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/53791" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
@@ -465,14 +624,14 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Delicious Spine</h3>
-              <p data-editable=""><p><span style="font-size: 0.93rem;">Feel the muscles around your spine</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">soften &amp;</b><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">melt</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">from the</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">simple, delicious movement</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">in this class!&nbsp; T</span><span style="font-size: 0.93rem;">his class sequence is the closest thing to giving yourself</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">your own Osteopathic treatment! In</b>&nbsp;this 1hr somatic class you<span style="font-size: 0.93rem;">&nbsp;will </span><b style="font-size: 0.93rem;">nourish and mobilize</b><span style="font-size: 0.93rem;"> the spine using a deflated&nbsp; ball.</span></p><p></p><p><br></p><p><br></p><p><br></p></p>
+              <p data-editable="">Feel the muscles around your spine <b>soften &amp;</b> <b>melt</b> from the <b>simple, delicious movement</b> in this class!&nbsp; This class sequence is the closest thing to giving yourself <b>your own Osteopathic treatment! In</b>&nbsp;this 1hr somatic class you&nbsp;will <b>nourish and mobilize</b> the spine using a deflated&nbsp; ball.</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/77614" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Category 2: Pain & Nervous System -->
+      <!-- Category 2: Nervous System -->
       <div class="category-group">
         <h3 data-editable="">Nervous System</h3>
         <div class="grid-4">
@@ -482,8 +641,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Nervous System Updated:&nbsp;An Embodied Polyvagal Conversation</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/92908/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""></p><p>The <b>Polyvagal debate</b> is sparking a lot of controversy!&nbsp;&nbsp;<span style="font-size: 0.93rem;">Humans are </span><b style="font-size: 0.93rem;">extremely complex</b><span style="font-size: 0.93rem;">. It's important to continuously </span><b style="font-size: 0.93rem;">challenge, revisit &amp; reevaluate</b><span style="font-size: 0.93rem;"> theories and ideas so we can keep moving forward.</span></p><p><span style="font-size: 0.93rem;">Let's get into it!</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92908" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -492,8 +651,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Awaken to the Art of Breathing</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/68473/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><span style="font-size: 0.93rem;">Your breath has the power to&nbsp;</span><b style="font-size: 0.93rem;">exacerbate your pain, soften it or make it go away</b><span style="font-size: 0.93rem;">. L</span><span style="font-size: 0.93rem;">earn to </span><b style="font-size: 0.93rem;">use your breath to your advantage</b><span style="font-size: 0.93rem;">.&nbsp;</span><span style="font-size: 0.93rem;">Guest expert Annie Simard&nbsp; guides us through an </span><b style="font-size: 0.93rem;">embodied exploration </b><span style="font-size: 0.93rem;">of </span><b style="font-size: 0.93rem;">Stephen Elliot’s The 6 Bridges.</b><span style="font-size: 0.93rem;">&nbsp;</span><i style="font-size: 0.93rem;"><b>Energy flows where your mind goes!&nbsp;</b></i><span style="font-size: 0.93rem;">&nbsp;</span></p><p><br></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/68473" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -502,8 +661,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Hybrid Hugs</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/60800/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable="">Embody how it feels when your autonomic nervous system chooses one of 5 states. Explore through the lens of physical sensation, thoughts, feelings and stories. This workshop is best paired with Shaping Your Nervous System.</p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/60800" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -512,8 +671,8 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Shaping Your Nervous System</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/60376/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable="">This workshop teaches you&nbsp; to recognize and embody the different nervous system states. Based on the work of Dr. Arielle Schwartz, Deb Dana and Stephen Porges, and Colleen's Osteopathic perspective, learn practices &amp; tools to build capacity and resilience you&nbsp;<span>can apply immediately.</span></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/60376" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -522,8 +681,15 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Befriend</h3>
-              <p data-editable="">Explore advanced techniques for co-regulation and self-regulation within the polyvagal framework. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable="">This ​BUNDLE includes​:</p>
+              <ul class="bulleted-list" data-editable="">
+                <li><b>A Neuroception workshop</b> replay</li>
+                <li><b>A Befriending the Nervous System worksho</b>p replay</li>
+                <li>​A ​<b>vagal tone yoga class</b> -​embody the 3 main nervous system states</li>
+                <li><b><i>Stroll Along The Vagus</i></b> - A series of ​1<b>4 ​self-releases and breath ​practices</b> that target the various branches of the vagus nerve</li>
+                <li>​<b>Vagal Tone theory</b> - <b>6 short videos </b>explaining why and how to use vagal tone practices​​</li>
+              </ul>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/42788" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -531,9 +697,9 @@ section[data-zone="osteopathy"] .btn {
               <img src="./assets/lungflowers 2.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">Dare to Breathe</h3>
+              <h3 data-editable="">DARE to Breathe</h3>
               <p data-editable="">A focused look at vagal tone and its impact on digestion, heart rate, and emotional resilience. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/43496/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
         </div>
@@ -541,7 +707,7 @@ section[data-zone="osteopathy"] .btn {
 
       <!-- Category 3: Mindfulness & Awareness -->
       <div class="category-group">
-        <h3 data-editable="">Mindfullness &amp; Awareness</h3>
+        <h3 data-editable="">Mindfulness &amp; Awareness</h3>
         <div class="grid-4">
           <div class="pathway-card">
             <div class="pathway-card-img">
@@ -550,7 +716,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">The Yamas and Niyamas</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/56511/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/56511/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -560,7 +726,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Sleep Solutions</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -570,7 +736,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Embodying the Anatomy of Breath</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -580,7 +746,7 @@ section[data-zone="osteopathy"] .btn {
             <div class="pathway-card-body">
               <h3 data-editable="">Chasing Happiness: Should we?</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/76770/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/76770/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
         </div>
@@ -934,7 +1100,14 @@ section[data-zone="osteopathy"] .btn {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Befriend</h3>
-              <p data-editable="">Small group sessions focusing on specific wellness topics, allowing for shared learning and support in a facilitated environment.</p>
+              <p data-editable="">This ​BUNDLE includes​:</p>
+              <ul class="bulleted-list" data-editable="">
+                <li><b>A Neuroception workshop</b> replay</li>
+                <li><b>A Befriending the Nervous System worksho</b>p replay</li>
+                <li>​A ​<b>vagal tone yoga class</b> where you can​physically ​embody the 3 different states</li>
+                <li><b><i>Stroll Along The Vagus</i></b> - A series of ​1<b>4 ​self-releases and breath ​practices</b> that target the various branches of the vagus nerve</li>
+                <li>​<b>Vagal Tone theory</b> - <b>6 short videos </b>explaining why and how to use vagal tone practices​​</li>
+              </ul>
               <a href="https://stillness-in-motion.heymarvelous.com/product/42788/about" class="card-link" target="_blank" rel="noopener noreferrer">Get Details →</a>
             </div>
           </div>
