@@ -136,8 +136,9 @@
   
   
 <style id="__gitqi-section-osteopathy-styles">/* all CSS needed for this section, including media queries */
-section[data-zone="osteopathy"] {
-    position: relative;
+section[data-zone="osteopathy"] .grid-2 {
+    align-items: center;
+    gap: var(--space-xl);
 }
 .osteopathy-image-wrapper {
     border-radius: var(--radius);
@@ -153,12 +154,15 @@ section[data-zone="osteopathy"] {
     min-height: 380px;
     cursor: pointer;
 }
-section[data-zone="osteopathy"] .grid-2 {
-    align-items: center;
-    gap: var(--space-xl);
-}
 section[data-zone="osteopathy"] .check-list {
     margin-top: var(--space-md);
+}
+/* Replaces checkmarks with standard bullets for this specific section's list */
+section[data-zone="osteopathy"] .check-list li::before {
+    content: '•'; /* Ensures a standard bullet point is used */
+    color: var(--color-primary);
+    font-weight: 700;
+    flex-shrink: 0;
 }
 section[data-zone="osteopathy"] .btn {
     margin-top: var(--space-md);
@@ -375,7 +379,7 @@ section[data-zone="workshops"] {
 
   
 
-  <section class="section" data-zone="osteopathy" data-zone-label="1:1 Osteopathy" id="osteopathy">
+  <section class="section" data-zone="osteopathy" data-zone-label="1:1 Osteopathy" id="osteopathy" style="position: relative;">
     <div class="container">
       <div class="grid-2">
         <div>
@@ -442,7 +446,7 @@ section[data-zone="workshops"] {
     </div>
 </section>
 
-  <section class="section" data-zone="workshops" data-zone-label="Workshops and Courses" id="workshops">
+  <section class="section" data-zone="workshops" data-zone-label="Workshops and Courses" id="workshops" style="">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-label" data-editable="">Learn at Your Own Pace</span>
@@ -480,9 +484,11 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Fascia: Aging, Pain and Movement</h3>
-              <p data-editable="">It is a myth to expect pain &amp; dysfunction as you age.</p>
-              <p data-editable="">You have the<b> power to influence your fascia every day.</b></p>
-              <p data-editable="">Hear the <b>latest scientific findings</b> in fascia, aging and pain and enjoy being guided&nbsp; through <b>movements that counteract</b>&nbsp;normal age-related changes.&nbsp;</p>
+              <ul class="bulleted-list" data-editable="">
+                <li>It is a myth to expect pain &amp; dysfunction as you age.</li>
+                <li>You have the<b> power to influence your fascia every day.</b></li>
+                <li>Hear the <b>latest scientific findings</b> in fascia, aging and pain and enjoy being guided&nbsp; through <b>movements that counteract</b>&nbsp;normal age-related changes.&nbsp;</li>
+              </ul>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/53791" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
@@ -640,7 +646,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Eyes: <br>Windows to Your Soul, Extension of Your Brain</h3>
-              <p data-editable="">The eyes dictate what nervous system state we're in...how cool is that?!?&nbsp; In this workshop I’ll share tools you can use while on your devices and guide you through several practices that help <b>reduce eye strain </b>and <b>build nervous system resilience&nbsp;</b>through&nbsp;<span style="font-size: 0.93rem;">Osteopa-thic self-release, acupressure, m</span><span style="font-size: 0.93rem;">indfulness practices, eye exercises and vagal tone.</span></p>
+              <p data-editable="">The eyes dictate what nervous system state we're in...how cool is that?!?&nbsp; In this workshop I’ll share tools you can use while on your devices and guide you through several practices that help <b>reduce eye strain </b>and <b>build nervous system resilience&nbsp;</b>through&nbsp;Osteopa-thic self-release, acupressure, mindfulness practices, eye exercises and vagal tone.</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/58600" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -662,7 +668,7 @@ section[data-zone="workshops"] {
                 <li>activation and calming</li>
                 <li>in breath and out breath</li>
               </ul>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/71028/abouhttps://stillness-in-motion.heymarvelous.com/buy/product/71028t" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/71028" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -671,7 +677,13 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Move</h3>
-              <p data-editable=""><p><b>&nbsp;This bundle includes:<br>14 movement classes&nbsp;<br></b><b style="font-size: 0.93rem;">and&nbsp;<br></b><span style="font-size: 0.93rem;"><b>52 '</b><em style="font-weight: bold;">movement snacks</em><b>'</b><br></span><span style="font-size: 0.93rem;">The movement classes are&nbsp;</span><b style="font-size: 0.93rem;">inspired by Pilates, yoga, somatics, Feldenkrais, Body Mind Centering and Pain Care Aware movement principles.&nbsp;&nbsp;</b><span style="font-size: 0.93rem;">The '<em>movement&nbsp;</em></span><em style="font-size: 0.93rem;">snacks</em><span style="font-size: 0.93rem;">' are short movement explorations that cycle through the whole body.&nbsp; Hands/feet, arms/legs, the head/spine and everything in between!</span></p></p>
+              <p data-editable=""><b>This bundle includes:</b></p>
+              <ul class="bulleted-list" data-editable="">
+                <li><b>14 movement classes</b></li>
+                <li><b>52 '</b><em style="font-weight: bold;">movement snacks</em><b>'</b></li>
+                <li>The movement classes are&nbsp;<b>inspired by Pilates, yoga, somatics, Feldenraks, Body Mind Centering and Pain Care Aware movement principles.</b></li>
+                <li>The '<em>movement&nbsp;snacks</em>' are short movement explorations that cycle through the whole body.&nbsp; Hands/feet, arms/legs, the head/spine and everything in between!</li>
+              </ul>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/51593" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -681,7 +693,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Neuro Playground</h3>
-              <p data-editable=""><p><b>This is a&nbsp;</b>movement lab for curious bodies!&nbsp; Here&nbsp;<span style="font-size: 0.93rem;">your nervous system gets to </span><b style="font-size: 0.93rem;">play, explore, and rewire</b><span style="font-size: 0.93rem;">. S</span><b style="font-size: 0.93rem;">trength exercises are not always the best way to get stronger and stretches are rarely the best way to get more flexible.</b><span style="font-size: 0.93rem;">&nbsp;M</span><span style="font-size: 0.93rem;">ovement is a </span><b style="font-size: 0.93rem;">motor <em>output</em></b><span style="font-size: 0.93rem;">.&nbsp; This workshop uses s</span><b style="font-size: 0.93rem;">ensory <em>input</em></b><span style="font-size: 0.93rem;">&nbsp;to get better outputs. This&nbsp;</span><span style="font-size: 0.93rem;">reassures our nervous systems we're&nbsp;</span><b style="font-size: 0.93rem;">safe.</b><span style="font-size: 0.93rem;">&nbsp;<br></span><b style="font-size: 0.93rem;">Protection decreases </b><span style="font-size: 0.93rem;">and all of a sudden the&nbsp; </span><b style="font-size: 0.93rem;">movement and flexibility improve.&nbsp; Give it a try!</b></p></p>
+              <p data-editable="">This is a&nbsp;movement lab for curious bodies!&nbsp; Here&nbsp;your nervous system gets to <b>play, explore, and rewire</b>. <b>Strength exercises are not always the best way to get stronger and stretches are rarely the best way to get more flexible.</b>&nbsp;Movement is a <b>motor <em>output</em></b>.&nbsp; This workshop uses <b>sensory <em>input</em></b>&nbsp;to get better outputs. This&nbsp;reassures our nervous systems we're&nbsp;<b>safe.</b>&nbsp;<b>Protection decreases </b>&nbsp;and all of a sudden the&nbsp; <b>movement and flexibility improve.&nbsp; Give it a try!</b></p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92380" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -691,7 +703,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Unkink your Think</h3>
-              <p data-editable=""><p>Posture is not just about aesthetics, it's about cognitive&nbsp;<b>function and overall health</b>.&nbsp; The vessels that&nbsp;<span style="font-size: 0.93rem;">supply the brain with</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">oxygenated blood and nutrients</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">and rid the brain of</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">waste&nbsp;</b><span style="font-size: 0.93rem;">pass through the neck.&nbsp; So neck and&nbsp;</span><span style="font-size: 0.93rem;">head&nbsp;</span><b style="font-size: 0.93rem;">posture&nbsp;</b><span style="font-size: 0.93rem;">are linked to </span><b style="font-size: 0.93rem;">cognitive function</b><span style="font-size: 0.93rem;"> and </span><b style="font-size: 0.93rem;">cardiovascular health</b><span style="font-size: 0.93rem;">.</span></p><p>Don't wait until you have an issue.&nbsp; Be proactive and start correcting your head / neck and upper back posture NOW!</p></p>
+              <p data-editable="">Posture is not just about aesthetics, it's about cognitive&nbsp;<b>function and overall health</b>.&nbsp; The vessels that&nbsp;supply the brain with&nbsp;<b>oxygenated blood and nutrients</b>&nbsp;and rid the brain of&nbsp;<b>waste&nbsp;</b>pass through the neck.&nbsp; So neck and&nbsp;head&nbsp;<b>posture&nbsp;</b>are linked to <b>cognitive function</b>&nbsp;and&nbsp;<b>cardiovascular health</b>.</p><p data-editable="">Don't wait until you have an issue.&nbsp; Be proactive and start correcting your head / neck and upper back posture NOW!</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92152" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -701,7 +713,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Unbound</h3>
-              <p data-editable=""><p><span style="font-size: 0.93rem;">Ever feel like your body’s holding onto something it forgot to let go of?&nbsp;&nbsp;</span>Unbound is a&nbsp;somatic movement experience to melt, soften and release by&nbsp; addressing&nbsp;<span style="font-size: 0.93rem;">areas of tension, numbness and / or disconnection.&nbsp;</span><span style="font-size: 0.93rem;">Unbound isn’t about pushing through pain or performing perfect poses. It’s about listening in, loosening up, and letting your body lead the way.</span></p></p>
+              <p data-editable="">Ever feel like your body’s holding onto something it forgot to let go of?&nbsp;&nbsp;Unbound is a&nbsp;somatic movement experience to melt, soften and release by&nbsp; addressing&nbsp;areas of tension, numbness and / or disconnection.&nbsp;Unbound isn’t about pushing through pain or performing perfect poses. It’s about listening in, loosening up, and letting your body lead the way.</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/88168" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -711,7 +723,16 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Cross the Midline</h3>
-              <p data-editable=""><p><span style="font-size: 0.93rem;">When we do movements that </span><b style="font-size: 0.93rem;">cross the midline</b><span style="font-size: 0.93rem;"> we unlock better&nbsp;</span><span style="font-size: 0.93rem;">balance,&nbsp;</span><span style="font-size: 0.93rem;">coordination,a</span><span style="font-size: 0.93rem;">gility,&nbsp;</span><span style="font-size: 0.93rem;">cognition,&nbsp;</span><span style="font-size: 0.93rem;">focus and p</span><span style="font-size: 0.93rem;">ain relief.&nbsp;&nbsp;</span><span style="font-size: 0.93rem;">In this workshop, we’ll explore </span><b style="font-size: 0.93rem;">playful cross-body movements</b><span style="font-size: 0.93rem;">&nbsp;to&nbsp;</span><span style="font-size: 0.93rem;">tap into the brain’s ability to </span><b style="font-size: 0.93rem;">rewire, heal, and grow</b><span style="font-size: 0.93rem;">.&nbsp;</span><b style="font-size: 0.93rem;">Crossing the midline</b><span style="font-size: 0.93rem;">&nbsp;creates&nbsp;</span><b style="font-size: 0.93rem;">new neural pathways</b><span style="font-size: 0.93rem;"> that promote </span><b style="font-size: 0.93rem;">clarity &amp; harmony</b><span style="font-size: 0.93rem;"> between your mind and body.&nbsp;</span></p></p>
+              <p data-editable="">When we do movements that <b>cross the midline</b> we unlock:</p>
+              <ul class="bulleted-list" data-editable="">
+                <li>better balance</li>
+                <li>coordination</li>
+                <li>agility</li>
+                <li>cognition</li>
+                <li>focus</li>
+                <li>pain relief</li>
+              </ul>
+              <p data-editable="">In this workshop, we’ll explore <b>playful cross-body movements</b>&nbsp;to&nbsp;tap into the brain’s ability to <b>rewire, heal, and grow</b>.&nbsp;<b>Crossing the midline</b>&nbsp;creates&nbsp;<b>new neural pathways</b>&nbsp;that promote&nbsp;<b>clarity &amp; harmony</b>&nbsp;between your mind and body.&nbsp;</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/84279" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -721,7 +742,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Soma Flow: Boundaries &amp; Support</h3>
-              <p data-editable=""><p>S<b>oma flow</b>&nbsp;is about <b>tuning inward</b> and allowing your&nbsp;<b>body&nbsp;</b>to guide your movement. Rather than focusing on the outer shape of a pose, this class focuses on internal sensation.&nbsp; It's&nbsp;<span style="font-size: 0.93rem;">&nbsp;about </span><b style="font-size: 0.93rem;">clarifying your boundaries through exploration of movement and space.&nbsp; As you accept physical support, explore you'll explore your physiological responses to accepting that support</b><b style="font-size: 16px; background-color: rgb(255, 255, 255);"><font color="#000000" face="Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">.</font></b></p></p>
+              <p data-editable="">S<b>oma flow</b>&nbsp;is about <b>tuning inward</b> and allowing your&nbsp;<b>body&nbsp;</b>to guide your movement. Rather than focusing on the outer shape of a pose, this class focuses on internal sensation.&nbsp; It's&nbsp;&nbsp;about <b>clarifying your boundaries through exploration of movement and space.&nbsp; As you accept physical support, explore you'll explore your physiological responses to accepting that support</b>.</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/79057" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -731,7 +752,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Yoga Flow:<br>Pelvic floor and Fall prevention</h3>
-              <p data-editable=""><p>This workshop focuses on&nbsp;<b style="font-size: 0.93rem;">moving through different positions and planes of motion&nbsp;</b><span style="font-size: 0.93rem;">while keeping your </span><b style="font-size: 0.93rem;">diaphragm free&nbsp;</b><span style="font-size: 0.93rem;">and noticing </span><b style="font-size: 0.93rem;">how your pelvic floor responds</b><span style="font-size: 0.93rem;">.&nbsp; It also guides you through</span><span style="font-size: 0.93rem;">&nbsp;the </span><b style="font-size: 0.93rem;">strength and reaction time of the upper extremities</b><span style="font-size: 0.93rem;"> because that is where injury happens in 50% of falls for those 65 yrs and older.&nbsp;&nbsp;</span></p></p>
+              <p data-editable="">This workshop focuses on&nbsp;<b>moving through different positions and planes of motion&nbsp;</b>while keeping your <b>diaphragm free&nbsp;</b>and noticing <b>how your pelvic floor responds</b>.&nbsp; It also guides you through&nbsp;the <b>strength and reaction time of the upper extremities</b>&nbsp;because that is where injury happens in 50% of falls for those 65 yrs and older.&nbsp;&nbsp;</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/78797" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -751,7 +772,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">CORE BASICS</h3>
-              <p data-editable=""><p>Sometimes the timing and / or the recruitment of certain muscles, especially the core, can get interrupted, even disrupted. For example after&nbsp;<span style="font-size: 0.93rem;">surgery,&nbsp;</span><span style="font-size: 0.93rem;">injury,&nbsp;</span><span style="font-size: 0.93rem;">chemo or radiation.&nbsp;&nbsp;</span><span style="font-size: 0.93rem;">Sometimes the system needs a little help to reestablish the ability to work as a cohesive unit. In this workshop learn to directly cue, connect and engage the muscles in a specific way.&nbsp; Let's get&nbsp;</span><span style="font-size: 0.93rem;">back to basics!</span></p></p>
+              <p data-editable="">Sometimes the timing and / or the recruitment of certain muscles, especially the core, can get interrupted, even disrupted. For example after&nbsp;surgery,&nbsp;injury,&nbsp;chemo or radiation.&nbsp;&nbsp;Sometimes the system needs a little help to reestablish the ability to work as a cohesive unit. In this workshop learn to directly cue, connect and engage the muscles in a specific way.&nbsp; Let's get&nbsp;back to basics!</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/79110" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -771,7 +792,12 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Floss n'&nbsp; FLow</h3>
-              <p data-editable=""><p>'F<b>loss</b>' the peripheral nerves as you move through a yoga flow class.&nbsp;&nbsp;<span style="font-size: 0.93rem;">When a nerve is not able glide</span><span style="font-size: 0.93rem;">, it has the potential to&nbsp; cause </span><b style="font-size: 0.93rem;">irritation and inflammation</b><span style="font-size: 0.93rem;">.&nbsp; We'll use&nbsp;</span><span style="font-size: 0.93rem;">neurodynamic&nbsp; movements to r</span><span style="font-size: 0.93rem;">estore balance in the neuroimmune system.&nbsp; We'll embody the difference between a&nbsp;</span><span style="font-size: 0.93rem;">'sliders' and a 'tensioners' to reestablish slide and glide.</span></p></p>
+              <ul class="bulleted-list" data-editable="">
+                <li>'F<b>loss</b>' the peripheral nerves as you move through a yoga flow class.</li>
+                <li>Understand how a nerve not able to glide has the potential to cause <b>irritation and inflammation</b>.</li>
+                <li>Use neurodynamic movements to restore balance in the neuroimmune system.</li>
+                <li>Embody the difference between 'sliders' and 'tensioners' to reestablish slide and glide.</li>
+              </ul>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/81523" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
@@ -780,7 +806,7 @@ section[data-zone="workshops"] {
 
       <!-- Category 5: Osteopathic Self Treatment -->
       <div class="category-group">
-        <h3 data-editable="">Osteopathic Self Treatment</h3>
+        <h3 data-editable="">Osteopathic Self -Treatment</h3>
         <div class="grid-4">
           <div class="pathway-card">
             <div class="pathway-card-img">
@@ -788,8 +814,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Jaw: An Osteopathic Approach</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable="">The jaw does not live in isolation, nothing in the body does. In this workshop, experience how changing&nbsp;<span style="font-size: 0.93rem;">your dura,&nbsp;</span><span style="font-size: 0.93rem;">plantar fascia,&nbsp;</span><span style="font-size: 0.93rem;">breath,&nbsp;</span><span style="font-size: 0.93rem;">shoulder blades, and&nbsp;</span><span style="font-size: 0.93rem;">throat chakra&nbsp;</span>also changes your jaw.&nbsp; Experience the interconnections firsthand. And, if your jaw pops, clicks or locks, learn what you can do to help it.<span style="font-size: 0.93rem;"><br></span><br></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/73088" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -798,8 +824,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Gua Sha: An Osteopathic Approach</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/73088/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""></p><p><span style="font-size: 0.93rem;">More commonly known as a&nbsp;</span><b style="font-size: 0.93rem;">Chinese&nbsp;</b><b style="font-size: 0.93rem;">facial massage</b><span style="font-size: 0.93rem;"> technique, this workshop uses Osteopathy principles to also address the&nbsp;</span><b style="font-size: 0.93rem;">&nbsp;cranial </b><span style="font-size: 0.93rem;">&amp;</span><b style="font-size: 0.93rem;"> facial sutures.&nbsp; Use Gua Sha for&nbsp;</b><b style="font-size: 0.93rem;">vagal tone,&nbsp;</b><b style="font-size: 0.93rem;">&nbsp; &nbsp; lymphatic drainage, and&nbsp;</b><b style="font-size: 0.93rem;">dural release.</b><span style="font-size: 0.93rem;">&nbsp;A morning Gua Sha session has become my favourite morning ritual!</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/71932" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -807,9 +833,9 @@ section[data-zone="workshops"] {
               <img src="./assets/gut brain 2 2.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">The Gut Brain Heart Connection and Celebration</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/66530/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <h3 data-editable="">The Gut Brain Heart Connection&nbsp;</h3>
+              <p data-editable=""></p><p><span style="font-size: 0.93rem;">Embody the connections between the face, heart and gut through the vagus nerve. </span><span style="font-size: 0.93rem;">By tuning into your own neuroception and interoception you'll l</span><span style="font-size: 0.93rem;">earn to ground into a</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">regulated nervous system state...</b><span style="font-size: 0.93rem;">even when surrounded by stressful people and situations.&nbsp;</span><span style="font-size: 0.93rem;">No need to feel&nbsp;</span><b style="font-size: 0.93rem;">bloated, heavy and fatigued</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">after every celebration you attend.</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/66530" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -818,8 +844,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">TLC for your Gut</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/68453/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""></p><p>This workshop is a guided movement class that includes hands-on Osteopathy techniques to soothe and mobilize the gut.&nbsp;&nbsp;<span style="font-size: 0.93rem;">If you're feeling bloated, inflamed, fatigued, out of balance, sore...this workshop will help you to soothe your gut, which helps to soothe you as a whole.</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/68453" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -827,9 +853,9 @@ section[data-zone="workshops"] {
               <img src="./assets/lungs.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">The Lungs: Wring the Out!</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/53536/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <h3 data-editable="">The Lungs: <br>Wring 'em Out!</h3>
+              <p>Every breath you take, that fascia that surrounds the lungs, <em>the pleura</em>, needs to expand so the lungs can inflate fully.&nbsp;<span style="font-size: 0.93rem;">When adherences develop the lungs &amp; pleura can lose the capacity to glide and expand.&nbsp; This workshop teaches you how to get the&nbsp; slide &amp; glide back so your lungs can expand more easily.</span></p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/53536" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -838,8 +864,9 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Treat Yourself</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/43566/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p>In this program I share some of my favourite Osteopathic and
+self-release techniques for the following areas:</p><p>head / face / jaw (10)<br><span style="font-size: 0.93rem;">arms / hands / fingers (6)<br></span><span style="font-size: 0.93rem;">legs / feet (5)</span></p><p><span style="font-size: 0.93rem;">viscera (5)</span></p><p>Enjoy becoming your own hands-on therapist!&nbsp;&nbsp;</p><p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/43566" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -849,7 +876,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Restorative Yoga with&nbsp; Osteopathic <br>Self-Release</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
         </div>
