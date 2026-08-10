@@ -150,9 +150,10 @@
     min-height: 380px;
 }
 /* Section specific overrides */
+/* The base .grid-2 has gap: var(--space-lg). This increases it and centers alignment. */
 section[data-zone="osteopathy"] .grid-2 {
     align-items: center;
-    gap: var(--space-xl);
+    gap: var(--space-xl); /* Increased gap for this section */
 }
 section[data-zone="osteopathy"] .check-list {
     margin-top: var(--space-md);
@@ -990,7 +991,7 @@ self-release techniques for the following areas:</p><p>head / face / jaw (10)<br
 
       <!-- Category 8: The DARE series -->
       <div class="category-group">
-        <h3 data-editable="">The DARE Series</h3>
+        <h3 data-editable="">The DARE Bundles</h3>
         <div class="grid-4">
           <div class="pathway-card">
             <div class="pathway-card-img">
