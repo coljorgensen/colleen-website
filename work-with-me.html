@@ -136,162 +136,30 @@
   
   
 <style id="__gitqi-section-osteopathy-styles">/* all CSS needed for this section, including media queries */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
-:root{--color-primary:#5C4033;--color-secondary:#8B6F5E;--color-accent:#C17F5A;--color-bg:#FAF7F2;--color-bg-alt:#F2EDE4;--color-text:#2A1F1A;--color-text-muted:#7A6155;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--container-width:1100px;--radius:12px;--shadow:0 4px 24px rgba(42,31,26,0.08);--color-accent-soft:#E4C7A8;--color-blush:#D4937A;--color-border:#DDD0C0;  --font-dare: 'Roboto', system-ui, sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{font-size:16px;scroll-behavior:smooth;}
-body{font-family:var(--font-body);font-weight:300;background:var(--color-bg);color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased;}
-img{max-width:100%;height:auto;display:block;}
-a{color:inherit;text-decoration:none;}
-ul{list-style:none;}
-.container{width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);}
-h1,h2,h3,h4,h5{font-family:var(--font-heading);line-height:1.2;color:var(--color-primary);}
-h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:300;}
-h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:300;}
-h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:400;}
-h4{font-size:1.05rem;font-weight:400;}
-p{margin-bottom:var(--space-sm);}
-p:last-child{margin-bottom:0;}
-.section-label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-xs);display:block;}
-.btn{display:inline-block;padding:.8rem 1.8rem;border-radius:50px;font-family:var(--font-body);font-size:.95rem;font-weight:500;cursor:pointer;transition:all .2s ease;border:2px solid transparent;text-align:center;}
-.btn-primary{background:var(--color-accent);color:#fff;border-color:var(--color-accent);}
-.btn-primary:hover{background:var(--color-primary);border-color:var(--color-primary);}
-.btn-outline{background:transparent;color:var(--color-accent);border-color:var(--color-accent);}
-.btn-outline:hover{background:var(--color-accent);color:#fff;}
-.btn-secondary{background:var(--color-secondary);color:#fff;border-color:var(--color-secondary);}
-.btn-secondary:hover{background:#627058;border-color:#627058;}
-.btn-white{background:#fff;color:var(--color-accent);border-color:#fff;}
-.btn-white:hover{background:var(--color-bg-alt);}
-#main-nav{position:sticky;top:0;z-index:1000;background:var(--color-bg);border-bottom:1px solid var(--color-border);box-shadow:0 2px 12px rgba(42,31,26,.06);}
-.nav-inner{max-width:var(--container-width);margin:0 auto;padding:0 var(--space-md);display:flex;align-items:center;justify-content:space-between;height:70px;}
-.nav-logo{font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--color-text);white-space:nowrap;line-height:1.2;}
-.nav-logo span{display: block;font-family: var(--font-body);font-size: 0.68rem;font-weight: 400;letter-spacing: 0.10em;text-transform: uppercase;color: var(--color-text-muted);}
-.nav-links{display:flex;align-items:center;gap:1.1rem;}
-.nav-links a{font-size:.85rem;font-weight:500;color:var(--color-text-muted);transition:color .2s;white-space:nowrap;}
-.nav-links a:hover,.nav-links a.active{color:var(--color-primary);}
-.nav-links .nav-cta{background:var(--color-accent);color:#fff !important;padding:.45rem 1.1rem;border-radius:50px;}
-.nav-links .nav-cta:hover{background:var(--color-primary) !important;}
-.hamburger{display:none;flex-direction:column;justify-content:space-around;width:28px;height:22px;background:none;border:none;cursor:pointer;padding:0;z-index:9001;flex-shrink:0;}
-.hamburger span{display:block;width:100%;height:2px;background:var(--color-text);border-radius:2px;transition:all .3s ease;}
-@media(max-width:960px){
-  .hamburger{display:flex;}
-  .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:var(--color-bg);flex-direction:column;align-items:flex-start;gap:0;padding:var(--space-xs) 0;border-bottom:2px solid var(--color-border);box-shadow:0 8px 24px rgba(42,31,26,.1);z-index:9000;overflow-y:auto;max-height:calc(100vh - 70px);}
-  .nav-links.open{display:flex;}
-  .nav-links li{width:100%;}
-  .nav-links a{display:block;padding:.85rem var(--space-md);font-size:1rem;border-bottom:1px solid var(--color-border);}
-  .nav-links .nav-cta{margin:var(--space-sm) var(--space-md);display:inline-block;border-radius:50px;}
-}
-footer{background:#2E211A;color:rgba(255,255,255,.85);padding:var(--space-xl) 0 var(--space-md);}
-.footer-inner{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:var(--space-lg);padding-bottom:var(--space-lg);border-bottom:1px solid rgba(255,255,255,.08);}
-.footer-brand strong{font-family:var(--font-heading);font-size:1.05rem;font-weight:400;color:#fff;display:block;margin-bottom:var(--space-xs);}
-.footer-brand p{color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:.25rem;}
-.footer-nav{display:flex;flex-direction:column;gap:.5rem;}
-.footer-nav a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
-.footer-nav a:hover{color:var(--color-accent);}
-.footer-contact a{color:rgba(255,255,255,.6);font-size:.875rem;display:block;margin-bottom:.5rem;transition:color .2s;}
-.footer-contact a:hover{color:var(--color-accent);}
-.social-links{display:flex;gap:1rem;margin-top:var(--space-sm);flex-wrap:wrap;}
-.social-links a{color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s;}
-.social-links a:hover{color:var(--color-accent);}
-.footer-bottom{text-align:center;padding-top:var(--space-md);}
-.footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem;margin:0;}
-@media(max-width:700px){.footer-inner{grid-template-columns:1fr;gap:var(--space-md);}}
-.section{padding:var(--space-xl) 0;}
-.section-alt{background:var(--color-bg-alt);}
-.section-dark{background:#2E211A;}
-.section-dark h2,.section-dark h3,.section-dark h4{color:#fff;}
-.section-dark p,.section-dark li{color:rgba(255,255,255,.72);}
-.section-dark .section-label{color:var(--color-accent);}
-.section-primary{background:var(--color-primary);}
-.section-primary h2,.section-primary h3,.section-primary p{color:#fff;}
-.section-primary .section-label{color:var(--color-accent-soft);}
-.section-header{margin-bottom:var(--space-lg);}
-.section-header p{color:var(--color-text-muted);max-width:600px;}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-md);}
-@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
-.card{background:var(--color-bg);border-radius:var(--radius);padding:var(--space-md);box-shadow:var(--shadow);}
-.card-alt{background:var(--color-bg-alt);box-shadow:none;border:1px solid var(--color-border);}
-.card h3,.card h4{margin-bottom:var(--space-xs);}
-.card p{color:var(--color-text-muted);font-size:.93rem;}
-.card-icon{width:48px;height:48px;border-radius:12px;background:var(--color-accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-sm);font-size:1.4rem;}
-.card-link{display:inline-block;margin-top:var(--space-sm);font-size:.88rem;font-weight:600;color:var(--color-accent);}
-.card-link:hover{text-decoration:underline;}
-.testimonial{background:var(--color-bg);border-left:4px solid var(--color-accent);padding:var(--space-md);border-radius:0 var(--radius) var(--radius) 0;}
-.testimonial blockquote{font-style:italic;font-size:.97rem;line-height:1.75;color:var(--color-text);margin-bottom:var(--space-xs);}
-.testimonial cite{font-size:.82rem;font-weight:600;color:var(--color-text-muted);font-style:normal;}
-.cta-section{background:var(--color-bg-alt);padding:var(--space-xl) 0;text-align:center;}
-.cta-section h2{margin-bottom:var(--space-sm);}
-.cta-section p{color:var(--color-text-muted);max-width:540px;margin:0 auto var(--space-lg);}
-.text-center{text-align:center;}
-.text-muted{color:var(--color-text-muted);}
-.highlight{color:var(--color-accent);}
-.divider{border:none;border-top:1px solid var(--color-border);margin:var(--space-lg) 0;}
-.pill{display:inline-block;background:rgba(228,199,168,.5);color:var(--color-accent);padding:.28rem .8rem;border-radius:50px;font-size:.77rem;font-weight:600;}
-.pill-teal{background:rgba(212,147,122,.2);color:var(--color-blush);}
-.stat-box{text-align:center;padding:var(--space-md);}
-.stat-number{font-family:var(--font-heading);font-size:2.8rem;font-weight:300;color:var(--color-accent);line-height:1;display:block;}
-.stat-label{font-size:.88rem;color:var(--color-text-muted);margin-top:.25rem;display:block;}
-.timeline{position:relative;padding-left:2rem;}
-.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:var(--color-border);}
-.timeline-item{position:relative;margin-bottom:var(--space-md);}
-.timeline-item::before{content:'';position:absolute;left:-1.6rem;top:.48rem;width:12px;height:12px;border-radius:50%;background:var(--color-accent);}
-.timeline-item h4{margin-bottom:.25rem;}
-.timeline-item p{font-size:.9rem;color:var(--color-text-muted);}
-.faq-item{border-bottom:1px solid var(--color-border);padding:var(--space-sm) 0;}
-.faq-q{font-weight:600;font-size:1rem;margin-bottom:.4rem;color:var(--color-text);}
-.faq-a{color:var(--color-text-muted);font-size:.93rem;}
-.pathway-card{background:var(--color-bg);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
-.pathway-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(42,31,26,.12);}
-.pathway-card-img{height:190px;overflow:hidden;background:var(--color-bg-alt);}
-.pathway-card-img img{width:100%;height:100%;object-fit:cover;}
-.pathway-card-body{padding:var(--space-md);}
-.pathway-card-body h3{margin-bottom:var(--space-xs);}
-.pathway-card-body p{font-size:.93rem;color:var(--color-text-muted);margin-bottom:var(--space-sm);}
-.btn-group{display:flex;gap:var(--space-sm);flex-wrap:wrap;}
-.hero{padding:var(--space-xl) 0;background:var(--color-bg-alt);}
-.hero h1{margin-bottom:var(--space-sm);}
-.hero .lead{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);max-width:580px;}
-.hero-two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;}
-@media(max-width:768px){.hero-two-col{grid-template-columns:1fr;}}
-.check-list{display:flex;flex-direction:column;gap:.65rem;}
-.check-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem;color:var(--color-text-muted);}
-.check-list li::before{content:'\2713';color:var(--color-primary);font-weight:700;flex-shrink:0;}
-.num-circle{background:var(--color-primary);color:#fff;font-family:var(--font-heading);font-size:1.3rem;font-weight:700;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.num-circle-teal{background:var(--color-blush);}
-@media print{#main-nav,footer{display:none;}}
-
-/* Styles for the Osteopathy section */
 section[data-zone="osteopathy"] {
-    position: relative; /* Moved from inline style */
+    position: relative;
 }
 .osteopathy-image-wrapper {
     border-radius: var(--radius);
     overflow: hidden;
-    min-height: 380px; /* Preserve original min-height */
+    min-height: 380px;
     background: var(--color-bg-alt);
-    position: relative; /* Preserve original position: relative from inline style (though originally on section) */
+    position: relative;
 }
 .osteopathy-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-height: 380px; /* Preserve original min-height */
-    cursor: pointer; /* Preserve original cursor: pointer from inline style */
+    min-height: 380px;
+    cursor: pointer;
 }
-/* Apply specific grid styles for this section, converting inline styles to CSS */
 section[data-zone="osteopathy"] .grid-2 {
     align-items: center;
     gap: var(--space-xl);
 }
-/* Apply specific margin for the check-list, converting inline styles to CSS */
 section[data-zone="osteopathy"] .check-list {
     margin-top: var(--space-md);
 }
-/* Apply specific margin for the button, converting inline styles to CSS */
 section[data-zone="osteopathy"] .btn {
     margin-top: var(--space-md);
 }</style><style id="__gitqi-section-movement-styles">/* Styling for the Therapeutic Movement section */
@@ -641,7 +509,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Nervous System Updated:&nbsp;An Embodied Polyvagal Conversation</h3>
-              <p data-editable=""></p><p>The <b>Polyvagal debate</b> is sparking a lot of controversy!&nbsp;&nbsp;<span style="font-size: 0.93rem;">Humans are </span><b style="font-size: 0.93rem;">extremely complex</b><span style="font-size: 0.93rem;">. It's important to continuously </span><b style="font-size: 0.93rem;">challenge, revisit &amp; reevaluate</b><span style="font-size: 0.93rem;"> theories and ideas so we can keep moving forward.</span></p><p><span style="font-size: 0.93rem;">Let's get into it!</span></p><p></p>
+              <p data-editable="">The <b>Polyvagal debate</b> is sparking a lot of controversy! Humans are <b>extremely complex</b>. It's important to continuously <b>challenge, revisit &amp; reevaluate</b> theories and ideas so we can keep moving forward. Let's get into it!</p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92908" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
@@ -651,7 +519,7 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Awaken to the Art of Breathing</h3>
-              <p data-editable=""><span style="font-size: 0.93rem;">Your breath has the power to&nbsp;</span><b style="font-size: 0.93rem;">exacerbate your pain, soften it or make it go away</b><span style="font-size: 0.93rem;">. L</span><span style="font-size: 0.93rem;">earn to </span><b style="font-size: 0.93rem;">use your breath to your advantage</b><span style="font-size: 0.93rem;">.&nbsp;</span><span style="font-size: 0.93rem;">Guest expert Annie Simard&nbsp; guides us through an </span><b style="font-size: 0.93rem;">embodied exploration </b><span style="font-size: 0.93rem;">of </span><b style="font-size: 0.93rem;">Stephen Elliot’s The 6 Bridges.</b><span style="font-size: 0.93rem;">&nbsp;</span><i style="font-size: 0.93rem;"><b>Energy flows where your mind goes!&nbsp;</b></i><span style="font-size: 0.93rem;">&nbsp;</span></p><p><br></p><p></p>
+              <p data-editable="">Your breath has the power to <b>exacerbate your pain, soften it or make it go away</b>. Learn to <b>use your breath to your advantage</b>. Guest expert Annie Simard guides us through an <b>embodied exploration</b> of <b>Stephen Elliot’s The 6 Bridges.</b> <i><b>Energy flows where your mind goes!</b></i></p>
               <a href="https://stillness-in-motion.heymarvelous.com/buy/product/68473" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
@@ -715,8 +583,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Yamas and Niyamas</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/56511/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
+              <p data-editable="">An introductory workshop on the Yamas &amp; Niyamas with Colleen Jorgensen &amp; Jo Bregnard. Think of the yamas &amp; niyamas as guidelines that open you up to experiencing life more fully. Rather than getting knocked around by the ups and downs of life, the yamas and niyamas teach you to <b>rely on yourself</b> as the resource you can most reliably count on.</p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/56511" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -725,8 +593,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Sleep Solutions</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/83902/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
+              <p data-editable=""><b>This workshop offers several actionable sleep strategies you can incorporate into your nighttime and morning routines immediately.&nbsp; These will include grounding practices</b> that help promote sleep just before getting into bed &amp;&nbsp;<b>mobilization practices</b><span> that help to wake you up in the morning.&nbsp;&nbsp;</span>I will also share an ayurvedic recipe that promotes sleep.</p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/83902" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -735,8 +603,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Embodying the Anatomy of Breath</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/82753/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
+              <p data-editable="">In this workshop, we combine theory and practice as we look at the anatomy of the breath.&nbsp; The diaphragm is connected to just about every system in our bodies so the breath has the potential to affect and influence every single system in our bodies.&nbsp; Learn to use it to your advantage!</p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/82753" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -745,8 +613,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Chasing Happiness: Should we?</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/76770/about" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
+              <p data-editable="">Suffering is a normal part of being human.&nbsp;<span>In this workshop we’ll use Buddhist-inspired practices to turn toward the pain so we can&nbsp;</span><span>acknowledge it,&nbsp;</span><span>name it,&nbsp;</span><span>handle it &amp;&nbsp;</span><span>transform it.&nbsp; We'll explore how</span><span>&nbsp;fighting pain &amp; suffering can make it bigger &amp; more intense.&nbsp; </span><span>&nbsp;And h</span><span>ow cultivating joy and happiness, rather than grasping for them, can reduce suffering.</span></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/76770" class="card-link" target="_blank" rel="noopener noreferrer">grab the replay →</a>
             </div>
           </div>
         </div>
@@ -762,8 +630,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">For the Love of Feet</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/59580/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><span>Give your feet some much needed TLC!&nbsp;&nbsp;</span><span>When our feet lose strength or mobility, it affects our whole body.&nbsp; This workshop will help&nbsp;</span><span>add&nbsp;</span><span>spring to your step; improve&nbsp;</span><span>strength &amp; mobility; and embody the whole&nbsp;</span><span>kinetic chain between the feet, the knees, the hips, the pelvis and right up through the spine, shoulders and arms.</span></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/59580" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -771,9 +639,9 @@ section[data-zone="workshops"] {
               <img src="./assets/eye.jpeg" alt="Workshop Image" data-editable-image="" style="cursor: pointer;">
             </div>
             <div class="pathway-card-body">
-              <h3 data-editable="">The Eyes: Windows to your soul, extension of your brain</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/58600/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <h3 data-editable="">The Eyes: <br>Windows to Your Soul, Extension of Your Brain</h3>
+              <p data-editable="">The eyes dictate what nervous system state we're in...how cool is that?!?&nbsp; In this workshop I’ll share tools you can use while on your devices and guide you through several practices that help <b>reduce eye strain </b>and <b>build nervous system resilience&nbsp;</b>through&nbsp;<span style="font-size: 0.93rem;">Osteopa-thic self-release, acupressure, m</span><span style="font-size: 0.93rem;">indfulness practices, eye exercises and vagal tone.</span></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/58600" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -782,8 +650,19 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Its All About Balance</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/71028/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable="">This workshop focuses on many different types of balance:</p>
+              <ul class="bulleted-list" data-editable="">
+                <li>proprioception to prevent falling</li>
+                <li>effort vs ease (sthira / sukha)</li>
+                <li>awareness of the right and left sides of the body</li>
+                <li>awareness of the front and back of the body</li>
+                <li>visualizing vs doing</li>
+                <li>sensing vs thinking</li>
+                <li>the body-mind connection</li>
+                <li>activation and calming</li>
+                <li>in breath and out breath</li>
+              </ul>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/71028/abouhttps://stillness-in-motion.heymarvelous.com/buy/product/71028t" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -792,8 +671,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">DARE to Move</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/51593/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><p><b>&nbsp;This bundle includes:<br>14 movement classes&nbsp;<br></b><b style="font-size: 0.93rem;">and&nbsp;<br></b><span style="font-size: 0.93rem;"><b>52 '</b><em style="font-weight: bold;">movement snacks</em><b>'</b><br></span><span style="font-size: 0.93rem;">The movement classes are&nbsp;</span><b style="font-size: 0.93rem;">inspired by Pilates, yoga, somatics, Feldenkrais, Body Mind Centering and Pain Care Aware movement principles.&nbsp;&nbsp;</b><span style="font-size: 0.93rem;">The '<em>movement&nbsp;</em></span><em style="font-size: 0.93rem;">snacks</em><span style="font-size: 0.93rem;">' are short movement explorations that cycle through the whole body.&nbsp; Hands/feet, arms/legs, the head/spine and everything in between!</span></p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/51593" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -802,8 +681,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">The Neuro Playground</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/92380/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><p><b>This is a&nbsp;</b>movement lab for curious bodies!&nbsp; Here&nbsp;<span style="font-size: 0.93rem;">your nervous system gets to </span><b style="font-size: 0.93rem;">play, explore, and rewire</b><span style="font-size: 0.93rem;">. S</span><b style="font-size: 0.93rem;">trength exercises are not always the best way to get stronger and stretches are rarely the best way to get more flexible.</b><span style="font-size: 0.93rem;">&nbsp;M</span><span style="font-size: 0.93rem;">ovement is a </span><b style="font-size: 0.93rem;">motor <em>output</em></b><span style="font-size: 0.93rem;">.&nbsp; This workshop uses s</span><b style="font-size: 0.93rem;">ensory <em>input</em></b><span style="font-size: 0.93rem;">&nbsp;to get better outputs. This&nbsp;</span><span style="font-size: 0.93rem;">reassures our nervous systems we're&nbsp;</span><b style="font-size: 0.93rem;">safe.</b><span style="font-size: 0.93rem;">&nbsp;<br></span><b style="font-size: 0.93rem;">Protection decreases </b><span style="font-size: 0.93rem;">and all of a sudden the&nbsp; </span><b style="font-size: 0.93rem;">movement and flexibility improve.&nbsp; Give it a try!</b></p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92380" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -812,8 +691,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Unkink your Think</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/92152/about" class="card-link">Get details →</a>
+              <p data-editable=""><p>Posture is not just about aesthetics, it's about cognitive&nbsp;<b>function and overall health</b>.&nbsp; The vessels that&nbsp;<span style="font-size: 0.93rem;">supply the brain with</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">oxygenated blood and nutrients</b><span style="font-size: 0.93rem;"> </span><span style="font-size: 0.93rem;">and rid the brain of</span><span style="font-size: 0.93rem;"> </span><b style="font-size: 0.93rem;">waste&nbsp;</b><span style="font-size: 0.93rem;">pass through the neck.&nbsp; So neck and&nbsp;</span><span style="font-size: 0.93rem;">head&nbsp;</span><b style="font-size: 0.93rem;">posture&nbsp;</b><span style="font-size: 0.93rem;">are linked to </span><b style="font-size: 0.93rem;">cognitive function</b><span style="font-size: 0.93rem;"> and </span><b style="font-size: 0.93rem;">cardiovascular health</b><span style="font-size: 0.93rem;">.</span></p><p>Don't wait until you have an issue.&nbsp; Be proactive and start correcting your head / neck and upper back posture NOW!</p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/92152" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -822,8 +701,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Unbound</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/88168/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><p><span style="font-size: 0.93rem;">Ever feel like your body’s holding onto something it forgot to let go of?&nbsp;&nbsp;</span>Unbound is a&nbsp;somatic movement experience to melt, soften and release by&nbsp; addressing&nbsp;<span style="font-size: 0.93rem;">areas of tension, numbness and / or disconnection.&nbsp;</span><span style="font-size: 0.93rem;">Unbound isn’t about pushing through pain or performing perfect poses. It’s about listening in, loosening up, and letting your body lead the way.</span></p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/88168" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -832,8 +711,8 @@ section[data-zone="workshops"] {
             </div>
             <div class="pathway-card-body">
               <h3 data-editable="">Cross the Midline</h3>
-              <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/84279/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <p data-editable=""><p><span style="font-size: 0.93rem;">When we do movements that </span><b style="font-size: 0.93rem;">cross the midline</b><span style="font-size: 0.93rem;"> we unlock better&nbsp;</span><span style="font-size: 0.93rem;">balance,&nbsp;</span><span style="font-size: 0.93rem;">coordination,a</span><span style="font-size: 0.93rem;">gility,&nbsp;</span><span style="font-size: 0.93rem;">cognition,&nbsp;</span><span style="font-size: 0.93rem;">focus and p</span><span style="font-size: 0.93rem;">ain relief.&nbsp;&nbsp;</span><span style="font-size: 0.93rem;">In this workshop, we’ll explore </span><b style="font-size: 0.93rem;">playful cross-body movements</b><span style="font-size: 0.93rem;">&nbsp;to&nbsp;</span><span style="font-size: 0.93rem;">tap into the brain’s ability to </span><b style="font-size: 0.93rem;">rewire, heal, and grow</b><span style="font-size: 0.93rem;">.&nbsp;</span><b style="font-size: 0.93rem;">Crossing the midline</b><span style="font-size: 0.93rem;">&nbsp;creates&nbsp;</span><b style="font-size: 0.93rem;">new neural pathways</b><span style="font-size: 0.93rem;"> that promote </span><b style="font-size: 0.93rem;">clarity &amp; harmony</b><span style="font-size: 0.93rem;"> between your mind and body.&nbsp;</span></p></p>
+              <a href="https://stillness-in-motion.heymarvelous.com/buy/product/84279" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -843,7 +722,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Soma Flow: Boundaries &amp; Support</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/79057/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/79057/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -853,7 +732,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Yoga Flow:<br>Pelvic floor and Fall prevention</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/78797/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/78797/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -863,7 +742,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Delicious Spine</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/77614/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -873,7 +752,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">CORE BASICS</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/79110/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/79110/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -883,7 +762,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Restorative Yoga with Self Osteopathy</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/65422/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
           <div class="pathway-card">
@@ -893,7 +772,7 @@ section[data-zone="workshops"] {
             <div class="pathway-card-body">
               <h3 data-editable="">Floss n'&nbsp; FLow</h3>
               <p data-editable="">Brief description of the workshop or course, highlighting its key benefits and what participants will learn. This text is editable.</p>
-              <a href="https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Get details →</a>
+              <a href="https://stillness-in-motion.heymarvelous.com/product/81523/about" class="card-link" target="_blank" rel="noopener noreferrer">Grab the replay →</a>
             </div>
           </div>
         </div>
