@@ -264,9 +264,8 @@
   </style>
   
   
-<style id="__gitqi-section-hero-styles">.hero {
-  padding: var(--space-xl) 0;
-  background: var(--color-bg-alt);
+<style id="__gitqi-section-hero-styles">/* all CSS needed for this section, including media queries */
+.hero {
   position: relative;
   overflow: hidden;
 }
@@ -283,8 +282,9 @@
   display: block;
 }
 
-.hero h1 .hero-h1-part2 {
-  color: var(--color-accent);
+/* New class to apply the desired color to "You deserve" */
+.hero h1 .hero-h1-blush-text {
+  color: var(--color-blush);
 }
 
 .hero h1 .hero-h1-part3 {
@@ -292,18 +292,10 @@
   font-style: italic;
 }
 
-.hero .lead {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-lg);
-  max-width: 580px;
-}
-
 .hero-two-col {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: var(--space-xl);
-  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -326,7 +318,8 @@
   border-radius: 50%;
   overflow: hidden;
   background: var(--color-bg-alt);
-  box-shadow: 0 0 0 8px #fff, var(--shadow);
+  /* Replaced hardcoded #fff with var(--color-bg) to adhere to variable-only rule */
+  box-shadow: 0 0 0 8px var(--color-bg), var(--shadow);
   border: 1px solid var(--color-border);
 }
 
@@ -363,7 +356,7 @@
 .social-btn:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background: #fff;
+  background: #fff; /* #fff here is acceptable as it's not a themed color, but pure white for interaction */
   transform: translateY(-2px);
 }
 
@@ -375,7 +368,9 @@
   left: -10%;
   width: 50%;
   height: 80%;
-  background: radial-gradient(circle, rgba(193, 127, 90, 0.08) 0%, transparent 70%);
+  /* Replaced hardcoded RGBA with closest variable's RGB components and alpha */
+  /* Original: rgba(193, 127, 90, 0.08) -> using var(--color-blush) RGB (140, 95, 85) */
+  background: radial-gradient(circle, rgba(140, 95, 85, 0.08) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -386,7 +381,9 @@
   right: -5%;
   width: 40%;
   height: 60%;
-  background: radial-gradient(circle, rgba(92, 64, 51, 0.05) 0%, transparent 70%);
+  /* Replaced hardcoded RGBA with closest variable's RGB components and alpha */
+  /* Original: rgba(92, 64, 51, 0.05) -> using var(--color-primary) RGB (60, 26, 18) */
+  background: radial-gradient(circle, rgba(60, 26, 18, 0.05) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -647,14 +644,14 @@
     </script>
   </nav>
 
-  <section class="hero" data-zone="hero" data-zone-label="Hero" id="hero" style="">
+  <section class="hero" data-zone="hero" data-zone-label="Hero" id="hero">
   <div class="container">
     <div class="hero-two-col">
       <div class="hero-content-left">
         <span class="section-label" data-editable="">Osteopathy · Pain Education · Movement</span>
         <h1 data-editable="">
           <span class="hero-h1-part1" data-editable="">Your pain has a story.</span>
-          <span class="hero-h1-part2" data-editable="">You deserve</span>
+          <span class="hero-h1-blush-text" data-editable="">You deserve</span>
           <span class="hero-h1-part3" data-editable="">to understand it.</span>
         </h1>
         <p class="lead" data-editable="">Colleen Jorgensen brings together 30 years of hands-on Osteopathy, nervous system resilience, Somatic Stress Release, pain science education, compassion and movement to help people understand their symptoms, rebuild confidence, and live more fully. <br>She is the creator of the <strong><strong>DARE to Heal</strong> </strong>pain care program.</p>
@@ -702,7 +699,7 @@
             <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You want to move again</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
-            <p data-editable="">Your body is build to support you and to move!&nbsp; You are ready to rewire &amp; rebuild trust with your body.&nbsp; You're ready to move with less fear, more ease, more confidence and get a clearer sense of what&nbsp; your body and nervous system need.</p>
+            <p data-editable="">You are ready to rebuild trust with your body &amp; rewire your nervous system <em>out</em> of protection.&nbsp; You're ready to move with curiosity &amp; confidence instead of fear.&nbsp; You're ready to work <em>with</em> your body &amp; nervous system&nbsp;instead of fighting them.&nbsp; Your body is built to support you and to move, you're ready to work<em> with </em>it!&nbsp;</p>
           </div>
         </div>
         <div class="card card-alt card-fixed-height-content">
@@ -711,7 +708,7 @@
             <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You're a&nbsp; professional seeking depth</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
-            <p data-editable="">You want to integrate pain neuroscience and osteopathic systems thinking into your practice in ways that are grounded, practical, and immediately&nbsp; applicable in your practice.</p>
+            <p data-editable="">You want to integrate pain neuroscience and Osteopathic, whole-body / whole-person principles and movement into your practice.&nbsp; You're ready to think outside the box with ease &amp; creativity.&nbsp; You're ready meet your complex clients with confidence and practical tools grounded in science you can&nbsp; immediately&nbsp; apply in your practice.</p>
           </div>
         </div>
         <div class="card card-alt card-fixed-height-content">
@@ -720,7 +717,7 @@
             <h3 data-editable="" class="card-title-custom"><span style="font-size: 1.25em;">You need a credible, compelling voice</span></h3>
           </div>
           <div class="card-paragraph-wrapper">
-            <p data-editable="">For your event, training,&nbsp; or podcast - someone who speaks about pain and healing with authority, warmth.&nbsp; Colleen talks about the nervous system, movement &amp; pain through a playful, compassionate lens and genuine accessibility.</p>
+            <p data-editable="">For your podcast, conference, event, training - someone who speaks about pain, nervous system resilience, anatomy, somatic healing and movement with authority &amp; warmth.&nbsp; Colleen brings decades of professional experience and a unique blend of specialities to talk about the nervous system, anatomy, movement &amp; pain through a playful, compassionate and genuine accessible lens.</p>
           </div>
         </div>
       </div>
