@@ -265,33 +265,31 @@
   margin-right: auto;
 }
 
-[data-zone="dare-philosophy"] .grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg);
-}
-
 [data-zone="dare-philosophy"] .pathway-card-body {
   text-align: center;
   padding: var(--space-md);
 }
 
 [data-zone="dare-philosophy"] .pathway-card-img {
-  position: relative;
-  height: 190px;
-  overflow: hidden;
-  background: var(--color-bg-alt);
+  height: 190px; /* Keep original image height for visual consistency */
+  background: var(--color-primary); /* Dark background as requested */
+  display: flex; /* Use flexbox to center the letter */
+  align-items: center;
+  justify-content: center;
+  /* `overflow: hidden` is inherited from the base .pathway-card-img to respect parent card's radius */
 }
 
-[data-zone="dare-philosophy"] .pathway-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
+/* Style for the new letter element */
+[data-zone="dare-philosophy"] .pathway-card-letter {
+  color: #fff; /* White text for the letter */
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 6rem); /* Large, responsive font size for impact */
+  font-weight: 300; /* Light weight for elegance, consistent with h1/h2 */
+  line-height: 1; /* Remove extra space around the letter */
 }
 
 @media (max-width: 900px) {
+  /* This media query overrides the base .grid-2 to display as a single column earlier */
   [data-zone="dare-philosophy"] .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -553,7 +551,8 @@
     <div class="grid-2">
       <div class="pathway-card">
         <div class="pathway-card-img">
-          <img src="./assets/D_long.png" alt="Illustration of discovery or learning" data-editable-image="" style="cursor: pointer;">
+          <!-- Replaced image with a div for the letter 'D' -->
+          <div class="pathway-card-letter" data-editable="">D</div>
         </div>
         <div class="pathway-card-body">
           <h3 data-editable="">Discover &amp; Dialogue</h3>
@@ -563,7 +562,8 @@
 
       <div class="pathway-card">
         <div class="pathway-card-img">
-          <img src="./assets/A_long.png" alt="Illustration of acceptance or calm" data-editable-image="" style="cursor: pointer;">
+          <!-- Replaced image with a div for the letter 'A' -->
+          <div class="pathway-card-letter" data-editable="">A</div>
         </div>
         <div class="pathway-card-body">
           <h3 data-editable="">Accept &amp; Allow</h3>
@@ -573,7 +573,8 @@
 
       <div class="pathway-card">
         <div class="pathway-card-img">
-          <img src="./assets/R_long.png" alt="Illustration of reframing or new perspective" data-editable-image="" style="cursor: pointer;">
+          <!-- Replaced image with a div for the letter 'R' -->
+          <div class="pathway-card-letter" data-editable="">R</div>
         </div>
         <div class="pathway-card-body">
           <h3 data-editable="">Respond &amp; Regulate</h3>
@@ -583,7 +584,8 @@
 
       <div class="pathway-card">
         <div class="pathway-card-img">
-          <img src="./assets/E_long.png" alt="Illustration of engagement or participation" data-editable-image="" style="cursor: pointer;">
+          <!-- Replaced image with a div for the letter 'E' -->
+          <div class="pathway-card-letter" data-editable="">E</div>
         </div>
         <div class="pathway-card-body">
           <h3 data-editable="">Enjoy, Explore &amp; Expand</h3>
