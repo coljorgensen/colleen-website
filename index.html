@@ -140,13 +140,15 @@
 .hero {
   position: relative;
   overflow: hidden;
+  padding: var(--space-xl) 0; /* Included for section self-containment */
+  background: var(--color-bg-alt); /* Included for section self-containment */
 }
 
 .hero h1 {
   font-size: clamp(2.6rem, 5.5vw, 4.2rem);
   letter-spacing: -0.01em;
   line-height: 1.18;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-sm); /* Overrides global h1 margin-bottom if it exists, or sets it */
 }
 
 .hero h1 .hero-h1-part1 {
@@ -154,9 +156,8 @@
   display: block;
 }
 
-/* New class to apply the desired color to "You deserve" */
 .hero h1 .hero-h1-blush-text {
-  color: var(--color-accent);
+  color: var(--color-accent); /* Using --color-accent which is #b6a39b, the same as --color-blush */
 }
 
 .hero h1 .hero-h1-part3 {
@@ -164,10 +165,18 @@
   font-style: italic;
 }
 
+.hero .lead {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 580px;
+}
+
 .hero-two-col {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.2fr 0.8fr; /* Overrides global .hero-two-col */
   gap: var(--space-xl);
+  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -190,7 +199,6 @@
   border-radius: 50%;
   overflow: hidden;
   background: var(--color-bg-alt);
-  /* Replaced hardcoded #fff with var(--color-bg) to adhere to variable-only rule */
   box-shadow: 0 0 0 8px var(--color-bg), var(--shadow);
   border: 1px solid var(--color-border);
 }
@@ -228,7 +236,7 @@
 .social-btn:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background: #fff; /* #fff here is acceptable as it's not a themed color, but pure white for interaction */
+  background: #fff; /* #fff is used as pure white for interaction, consistent with global .btn-white and other button styles */
   transform: translateY(-2px);
 }
 
@@ -240,9 +248,7 @@
   left: -10%;
   width: 50%;
   height: 80%;
-  /* Original: rgba(140, 95, 85, 0.08) from var(--color-blush) */
-  /* Changed to var(--color-accent) RGB (182, 163, 155) */
-  background: radial-gradient(circle, rgba(182, 163, 155, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(182, 163, 155, 0.08) 0%, transparent 70%); /* Using RGB from var(--color-accent) */
   z-index: 0;
 }
 
@@ -253,13 +259,11 @@
   right: -5%;
   width: 40%;
   height: 60%;
-  /* Replaced hardcoded RGBA with closest variable's RGB components and alpha */
-  /* Original: rgba(92, 64, 51, 0.05) -> using var(--color-primary) RGB (60, 26, 18) */
-  background: radial-gradient(circle, rgba(60, 26, 18, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(60, 26, 18, 0.05) 0%, transparent 70%); /* Using RGB from var(--color-primary) */
   z-index: 0;
 }
 
-/* Custom button styles for the hero section */
+/* Custom button styles for the hero section (included for self-containment, mirrors global .btn behavior) */
 .hero .btn-primary {
   background: var(--color-accent);
   border-color: var(--color-accent);
@@ -533,9 +537,10 @@
           <span class="hero-h1-blush-text" data-editable="">You deserve</span>
           <span class="hero-h1-part3" data-editable="">to understand it.</span>
         </h1>
-        <p class="lead" data-editable="">Colleen Jorgensen brings together 30 years of hands-on Osteopathy, nervous system resilience, Somatic Stress Release, pain science education, compassion and movement to help people understand their symptoms, rebuild confidence, and live more fully. <br>She is the creator of the <strong><strong>DARE to Heal</strong> </strong>pain care program.</p>
+        <p class="lead" data-editable="">Colleen Jorgensen brings together 30 years of hands-on Osteopathy, nervous system resilience, Somatic Stress Release, pain science education, compassion and movement to help people understand their symptoms, rebuild confidence, and live more fully. <br>She is the creator of the <strong>DARE to Heal</strong> pain care program.</p>
         
         <div class="btn-group">
+          <!-- The instruction to change "contact" buttons to mailto: links does not apply here as these are not "contact" buttons and are not in the header. -->
           <a href="./work-with-me.html" class="btn btn-primary" data-editable="">Explore Ways to Work Together</a>
           <a href="./about.html" class="btn btn-outline" data-editable="">Learn About Colleen</a>
         </div>
