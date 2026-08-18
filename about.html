@@ -136,21 +136,18 @@
   
   
 <style id="__gitqi-section-story-styles">#story {
-    position: relative; /* Moved from inline style */
+    position: relative;
 }
 
 .story-container {
-    max-width: 800px; /* Moved from inline style */
+    max-width: 800px;
 }
 
 #story h2 {
-    /* Double the space between the heading and the paragraph text */
-    /* Assuming the standard paragraph margin (var(--space-sm)) as a base for spacing */
     margin-bottom: calc(2 * var(--space-sm)); 
 }
 
 #story p {
-    /* Change the font colour to the dark brown */
     color: var(--color-primary);
 }</style><style id="__gitqi-section-credentials-styles">.timeline {
   padding-left: var(--space-lg); /* Increased from 2rem (32px) to 2.5rem (40px) to move text further right and ensure separation */
@@ -167,6 +164,25 @@
      5. -37px converted to rem (assuming 16px base font size): -37 / 16 = -2.3125rem.
   */
   left: calc(var(--space-xs) - 5px - var(--space-lg));
+}</style><style id="__gitqi-section-hero-2-styles">.hero {
+  /* Existing styles for .hero (padding, background) are in the global CSS */
+  position: relative; /* Moved from inline style on the <section> element */
+}
+
+.hero-image-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 400px;
+  background: var(--color-bg);
+  position: relative; /* Moved from inline style on the image wrapper div */
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  /* min-height: 400px; was removed from img as it's handled by parent's min-height and img's height:100% */
 }</style></head>
 <body style="">
   <nav id="main-nav" style="">
@@ -208,23 +224,23 @@
         <div>
           <span class="section-label" data-editable="">About Colleen</span>
           <h1 data-editable="">A career built on curiosity, care, and the belief that change is possible.</h1>
-          <p class="lead" data-editable="">Colleen Jorgensen is an Osteopath, movement specialist, and pain care educator whose work spans more than 28 years of clinical practice, teaching, speaking and ongoing learning.&nbsp;&nbsp;<br><br><span style="font-size: 17.6px;">Her work reflects a lifelong interest in how the body develops, adapts, and moves, from the earliest stages through complex patterns in adulthood.<br><br>Colleen is the creator of the <strong>DARE to Heal</strong>&nbsp;online pain care program.</span></p>
+          <p class="lead" data-editable="">Colleen Jorgensen is an Osteopath, movement specialist, and pain care educator whose work spans more than 30 years of clinical practice, teaching, speaking and ongoing learning.&nbsp;&nbsp;<br><br><span style="font-size: 17.6px;">Her work reflects a lifelong fascination with how the body develops, adapts, moves, and heals from the earliest stages of life through complex patterns in adulthood.<br><br>Colleen is the creator of the <strong>DARE to Heal</strong>&nbsp;online pain care program.</span></p>
         </div>
         <div style="border-radius: var(--radius); overflow: hidden; min-height: 400px; background: var(--color-bg); position: relative;">
           <img src="./assets/Col_baby.jpg" data-editable-image="" alt="Portrait of Colleen Jorgensen, D.O." style="width: 100%; height: 100%; object-fit: cover; min-height: 400px; cursor: pointer;">
         </div>
       </div>
     </div>
-  </section><section class="hero" data-zone="hero-2" data-zone-label="Hero 2" id="hero-2" style="position: relative;">
+  </section><section class="hero" data-zone="hero-2" data-zone-label="Hero 2" id="hero-2">
     <div class="container">
       <div class="hero-two-col">
         <div>
           <span class="section-label" data-editable="">About Colleen</span>
           <h1 data-editable="">A career built on curiosity, care, and the belief that change is possible.</h1>
-          <p class="lead" data-editable="">Colleen Jorgensen is an Osteopath, movement specialist, and pain care educator whose work spans more than 28 years of clinical practice, teaching, speaking and ongoing learning.&nbsp;&nbsp;<br><br><span style="font-size: 17.6px;">Her work reflects a lifelong interest in how the body develops, adapts, and moves, from the earliest stages through complex patterns in adulthood.<br><br>Colleen is the creator of the <strong>DARE to Heal</strong>&nbsp;online pain care program.</span></p>
+          <p class="lead" data-editable="">Colleen Jorgensen is an Osteopath, movement specialist, and pain care educator whose work spans more than 30 years of clinical practice, teaching, speaking and ongoing learning.&nbsp;&nbsp;<br><br>Her work reflects a lifelong fascination with how the body develops, adapts, moves, and heals.<br><br>Colleen is the creator of the <strong>DARE to Heal</strong>&nbsp;online pain care program.</p>
         </div>
-        <div style="border-radius: var(--radius); overflow: hidden; min-height: 400px; background: var(--color-bg); position: relative;">
-          <img src="./assets/Col_baby.jpg" data-editable-image="" alt="Portrait of Colleen Jorgensen, D.O." style="width: 100%; height: 100%; object-fit: cover; min-height: 400px; cursor: pointer;">
+        <div class="hero-image-container">
+          <img src="./assets/Col_baby.jpg" data-editable-image="" alt="Portrait of Colleen Jorgensen, D.O." class="hero-image" style="cursor: pointer;">
         </div>
       </div>
     </div>
@@ -234,9 +250,10 @@
     <div class="container story-container">
       <span class="section-label" data-editable="">Colleen's Story</span>
       <h2 data-editable="">Lived experience.&nbsp; <br>Clinical expertise.&nbsp; <br>Whole person care.</h2>
-      <div>Colleen’s work has evolved through decades of exploring movement, the body, and the many ways people experience both wellness and pain. Beginning with a foundation in dance and athletic therapy, and expanding into osteopathy, pain care education, and teaching, her path has been shaped by curiosity, ongoing study, and a willingness to question and refine her approach.</div><div><br></div><div>Rather than focusing on fixing isolated issues, her work supports a broader process of change, helping people reconnect with their bodies and return to the things that matter most to them.</div><p></p>
+      <p data-editable="">Colleen’s work has evolved over decades through exploring movement, anatomy, the nervous system, the body, and the many ways people experience health, illness and pain. She started with a foundation in dance and Athletic Therapy, and expanded into Osteopathy, pain care education, yoga, Pilates, Somatic Stress Release &amp; a Polyvagal approach to nervous system resilience.&nbsp; &nbsp;Colleen's love teaching the lay person and professionals equally.&nbsp; Her path has been shaped by curiosity, ongoing study, and a willingness to question and refine her approach.</p>
+      <p data-editable="">Rather than focusing on fixing isolated issues, Colleen's work supports a broader process of change, helping people reconnect with their bodies and return to the things that matter most to them.</p>
       <p data-editable="">What created the deepest shift, both in her own lived experience and her professional practice,&nbsp; was encountering pain neuroscience education: the growing body of research showing that pain is far more complex, and far more changeable,&nbsp; than most have been taught. She began integrating pain education into both her clinical work and her teaching, and watched it transform how her clients recovered and&nbsp; how they related to themselves.</p>
-      <p data-editable="">Today, Colleen works across multiple channels: in her private practice, through professional training programs, through her DARE to Heal online pain care program,&nbsp; and as a speaker and podcast guest. <br><br>Her consistent goal across all of it is the same: to offer people more clarity, more agency, and more JOY than they arrived with.</p>
+      <p data-editable="">Today, Colleen works across multiple channels: in her private practice, through professional training programs, through her DARE to Heal online pain care program,&nbsp; and as a speaker and podcast guest. <br><br>Her consistent goal across all of it is the same: to offer people more clarity, more agency, more curiosity and more JOY than they arrived with.</p>
     </div>
   </section>
 
