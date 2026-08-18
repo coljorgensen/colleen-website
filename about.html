@@ -140,30 +140,41 @@
 }
 
 .story-container {
-    max-width: 800px;
+    max-width: 800px; /* Specific width for this section's content */
 }
 
 #story h2 {
-    margin-bottom: calc(2 * var(--space-sm)); 
+    margin-bottom: calc(2 * var(--space-sm)); /* Custom margin for this section's heading */
 }
 
 #story p {
-    color: var(--color-primary);
-}</style><style id="__gitqi-section-credentials-styles">.timeline {
-  padding-left: var(--space-lg); /* Increased from 2rem (32px) to 2.5rem (40px) to move text further right and ensure separation */
+    color: var(--color-primary); /* Custom paragraph text color for this section */
+}</style><style id="__gitqi-section-credentials-styles">.credentials-section .credentials-grid {
+  margin-top: var(--space-lg);
 }
 
-.timeline-item::before {
-  /* Calculation for left position:
-     1. Desired line center (relative to timeline start): var(--space-xs) + 1px (0.5rem + 1px = 8px + 1px = 9px)
-     2. Desired dot left edge (relative to timeline start, to be centered on line): Line center - (dot width / 2) = 9px - 6px = 3px
-     3. The timeline-item content starts at `padding-left` of the `.timeline` element, which is var(--space-lg) = 2.5rem = 40px.
-     4. Therefore, the dot's `left` property (relative to its `timeline-item` parent) should be:
-        (Dot left edge relative to timeline start) - (timeline-item start relative to timeline start)
-        = 3px - 40px = -37px.
-     5. -37px converted to rem (assuming 16px base font size): -37 / 16 = -2.3125rem.
-  */
+.credentials-section .timeline {
+  padding-left: var(--space-lg);
+}
+
+.credentials-section .timeline-item::before {
   left: calc(var(--space-xs) - 5px - var(--space-lg));
+}
+
+.credentials-section .pain-care-list {
+  list-style: disc;
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+  padding-left: 0;
+}
+.credentials-section .pain-care-list li {
+  font-size: .9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+.credentials-section .pain-care-list li:last-child {
+  margin-bottom: 0;
 }</style><style id="__gitqi-section-hero-2-styles">.hero {
   /* Existing styles for .hero (padding, background) are in the global CSS */
   position: relative; /* Moved from inline style on the <section> element */
@@ -218,20 +229,7 @@
     </script>
   </nav>
 
-  <section class="hero" data-zone="hero" data-zone-label="Hero" id="hero" style="position: relative;">
-    <div class="container">
-      <div class="hero-two-col">
-        <div>
-          <span class="section-label" data-editable="">About Colleen</span>
-          <h1 data-editable="">A career built on curiosity, care, and the belief that change is possible.</h1>
-          <p class="lead" data-editable="">Colleen Jorgensen is an Osteopath, movement specialist, and pain care educator whose work spans more than 30 years of clinical practice, teaching, speaking and ongoing learning.&nbsp;&nbsp;<br><br><span style="font-size: 17.6px;">Her work reflects a lifelong fascination with how the body develops, adapts, moves, and heals from the earliest stages of life through complex patterns in adulthood.<br><br>Colleen is the creator of the <strong>DARE to Heal</strong>&nbsp;online pain care program.</span></p>
-        </div>
-        <div style="border-radius: var(--radius); overflow: hidden; min-height: 400px; background: var(--color-bg); position: relative;">
-          <img src="./assets/Col_baby.jpg" data-editable-image="" alt="Portrait of Colleen Jorgensen, D.O." style="width: 100%; height: 100%; object-fit: cover; min-height: 400px; cursor: pointer;">
-        </div>
-      </div>
-    </div>
-  </section><section class="hero" data-zone="hero-2" data-zone-label="Hero 2" id="hero-2">
+  <section class="hero" data-zone="hero-2" data-zone-label="Hero 2" id="hero-2">
     <div class="container">
       <div class="hero-two-col">
         <div>
@@ -246,65 +244,80 @@
     </div>
   </section>
 
-  <section class="section" data-zone="story" data-zone-label="Colleen's Story" id="story" style="">
+  <section class="section" data-zone="story" data-zone-label="Colleen's Story" id="story">
     <div class="container story-container">
-      <span class="section-label" data-editable="">Colleen's Story</span>
-      <h2 data-editable="">Lived experience.&nbsp; <br>Clinical expertise.&nbsp; <br>Whole person care.</h2>
-      <p data-editable="">Colleen’s work has evolved over decades through exploring movement, anatomy, the nervous system, the body, and the many ways people experience health, illness and pain. She started with a foundation in dance and Athletic Therapy, and expanded into Osteopathy, pain care education, yoga, Pilates, Somatic Stress Release &amp; a Polyvagal approach to nervous system resilience.&nbsp; &nbsp;Colleen's love teaching the lay person and professionals equally.&nbsp; Her path has been shaped by curiosity, ongoing study, and a willingness to question and refine her approach.</p>
-      <p data-editable="">Rather than focusing on fixing isolated issues, Colleen's work supports a broader process of change, helping people reconnect with their bodies and return to the things that matter most to them.</p>
-      <p data-editable="">What created the deepest shift, both in her own lived experience and her professional practice,&nbsp; was encountering pain neuroscience education: the growing body of research showing that pain is far more complex, and far more changeable,&nbsp; than most have been taught. She began integrating pain education into both her clinical work and her teaching, and watched it transform how her clients recovered and&nbsp; how they related to themselves.</p>
-      <p data-editable="">Today, Colleen works across multiple channels: in her private practice, through professional training programs, through her DARE to Heal online pain care program,&nbsp; and as a speaker and podcast guest. <br><br>Her consistent goal across all of it is the same: to offer people more clarity, more agency, more curiosity and more JOY than they arrived with.</p>
+        <span class="section-label" data-editable="">Colleen's Story</span>
+        <h2 data-editable="">Lived experience.&nbsp; <br>Clinical expertise.&nbsp; <br>Whole person care.</h2>
+        <p data-editable="">Fascinated with movement and how the body works, Colleen started dancing at the age of three and hasn’t stopped exploring movement since. Her love of movement is what drew her to manual and movement therapies which are as much an art as they are a science.&nbsp;</p>
+        <p data-editable="">All of her interests and experiences influences how Colleen shows up in her work. Her love movement in all its forms, her curiosity and connection to nature and wildlife, her genuine interest in people are all inform the intention behind her hands-on work and teaching.</p>
+        <p data-editable="">Rather than focusing on symptoms, her work is about addressing the whole person and getting to the root cause.&nbsp;&nbsp;<span style="color: rgb(85, 83, 83); font-family: lato-light, lato, sans-serif; font-size: 17px;">It's about working together to remove whatever may be getting in the way of the body's natural ability to express optimal health. Colleen focuses on&nbsp;</span>the recovery process, on getting people back to doing what they love most. After 30 yrs of working with the human body, she continues to be surprised that keeps her coming back!&nbsp; Most people end up in her office after trying many other professionals and approaches.&nbsp; Her specialty is helping those with long-standing, complex issues that affect many systems.</p>
+        <p data-editable="">Colleen’s work has evolved over decades through exploring movement, anatomy, the nervous system, the body, and the many ways people experience health, illness and pain. She started with a foundation in dance and Athletic Therapy, and expanded into Osteopathy, pain care, yoga, Pilates, Somatic Stress Release &amp; a Polyvagal approach to nervous system resilience. Colleen loves teaching the lay person and professionals equally. Her path has been shaped by curiosity, ongoing study, and a willingness to question and refine her approach.</p>
+        <p data-editable="">Colleen's work supports a broader process of change.&nbsp; She helps people reconnect with their bodies, become their own beset expert and return to the things that matter most to them.</p>
+        <p data-editable="">What created the deepest shift was her own challenges with complex chronic pain and encountering pain neuroscience education.&nbsp; There is a growing body of research showing that pain is far more complex, and far more changeable, than most have been taught. She's been integrating pain education into her clinical work and her teaching for almost two decades and has witnessed the impact it has on how her clients recover, relate to themselves and get back to living full lives.</p>
+        <p data-editable="">Today, Colleen works across multiple channels: in her private practice, through professional training programs, through her DARE to Heal online pain care program, and as a speaker and podcast guest. <br><br>Her consistent goal across all of it is the same: to support people in turning toward their body for answers rather than turning away from it when there is discomfort or pain.&nbsp; Her approach encourages clarity, agency, curiosity and choice.</p>
     </div>
-  </section>
+</section>
 
-  <section class="section section-alt" data-zone="credentials" data-zone-label="Credentials and Experience" id="credentials" style="position: relative;">
+  <section class="section section-alt credentials-section" data-zone="credentials" data-zone-label="Credentials and Experience" id="credentials" style="position: relative;">
     <div class="container">
       <span class="section-label" data-editable="">Training &amp; Background</span>
       <h2 data-editable="">Credentials &amp; Experience</h2>
-      <div class="grid-2" style="margin-top:var(--space-lg);">
+      <div class="grid-2 credentials-grid">
         <div class="timeline">
           <div class="timeline-item">
-            <h4 data-editable="">Osteopathy D.O.&nbsp;</h4>
-            <p data-editable="">Colleen graduated from the Collège d'Études Ostéopathiques in 2005.&nbsp; One of most rigorous programs in the country, she now has&nbsp; decades of clinical experience.</p>
+            <h4 data-editable=""><strong>Osteopathy D.O.&nbsp;</strong></h4>
+            <p data-editable="">Colleen graduated from the Collège d'Études Ostéopathiques in 2002.&nbsp; One of most rigorous programs in the country, she now has&nbsp; decades of clinical experience.&nbsp; She defended her thesis in 2005:&nbsp; <em>The Effect of Osteopathic Manipulation of the Kidneys on the Strength and Flexibility of the Iliopsoas Muscle Group.&nbsp; </em>She continues to expand her knowledge &amp; skills with yearly continuing education.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Pain Care Education&nbsp;</h4>
-            <p data-editable="">Trained in pain neuroscience and pain care education:<br>- Pain Care Aware Lead Trainer<br>- Professional Pain Care Certification with Neil Pearson &amp; Pain Care U<br>- Explain Pain with The Neuro Orthopaedic Institute (NOI) of Australia<br>- Mobilization of the Neuroimmune System&nbsp; with NOI of Australia<br>Acceptance and Commitment Therapy (ACT) and Functional Nutrition for Chronic Pain Certifications from the Integrative Pain Science Institute<br>Colleen has been integrating pain care coaching into professional, clinical 1:1 and group settings.</p>
+            <h4 data-editable=""><strong>Pain Care Education</strong>&nbsp;</h4>
+            <p data-editable="">Trained in pain neuroscience and pain care education:</p>
+            <ul class="pain-care-list">
+              <li data-editable="">Polyvagal Trauma Therapy certificate - The Embody Lab</li>
+              <li data-editable="">Somatic Stress Release Levels 1, 2, 3 certificate - The Embody Lab (Dr.&nbsp; Scott Lyons)</li>
+              <li data-editable="">Applied Polyvagal Theory in Yoga certificate Levels 1, 2, 3 - The Embody Lab (Dr.&nbsp; Arielle Schwartz)<br>Body as Healer:&nbsp; Freedom from Chronic Pain - Peter Levine</li>
+              <li data-editable="">Pain Care Aware Lead Trainer</li>
+              <li data-editable="">Professional Pain Care Certification - Neil Pearson &amp; Pain Care U</li>
+              <li data-editable="">Explain Pain - The Neuro Orthopaedic Institute (NOI) of Australia</li>
+              <li data-editable="">Mobilization of the Neuroimmune System&nbsp; -The NOI of Australia</li>
+              <li data-editable="">Acceptance and Commitment Therapy (ACT) - the Integrative Pain Science Institute (Joe Tatta)</li>
+              <li data-editable="">Functional Nutrition for Chronic Pain Certifications - the Integrative Pain Science Institute (Joe Tatta)</li>
+            </ul>
+            <p data-editable="">Colleen has been integrating pain care coaching into professional, clinical 1:1 and group settings.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Therapeutic Pilates&nbsp;</h4>
-            <p data-editable="">Certified instructor with training in clinical and rehabilitative applications for people with pain and injury history.</p>
+            <h4 data-editable=""><strong>Therapeutic Pilates&nbsp;</strong></h4>
+            <p data-editable="">Certified instructor since 1996 with training in clinical and rehabilitative applications for people with pain and injury history.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Yoga &amp; Somatic Movement</h4>
-            <p data-editable="">Trained across multiple modalities, including rehabilitative Pilates, yoga, breathwork and somatics, all with a focus on nervous system awareness,&nbsp; and embodied presence.</p>
+            <h4 data-editable=""><strong>Yoga &amp; Somatic Movement</strong></h4>
+            <p data-editable="">Trained across multiple modalities, including rehabilitative Pilates, Hatha, Restorative and Gentle Somatic yoga, breathwork and somatics, all with a focus on nervous system awareness,&nbsp; and embodied presence.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Athletic Therapy</h4>
-            <p data-editable="">Where it all began.&nbsp; Colleen graduated from Concordia University in 1995.&nbsp;</p>
+            <h4 data-editable=""><strong>Athletic Therapist</strong></h4>
+            <p data-editable="">Where it all began.&nbsp; Colleen graduated from Concordia University in 1995 with a B.Sc. in Exercise Science and a specialization in Athletic Therapy.</p>
           </div>
         </div>
         <div class="timeline">
           <div class="timeline-item">
-            <h4 data-editable="">Professional Education &amp; Training</h4>
+            <h4 data-editable=""><strong>Professional Education &amp; Training</strong></h4>
             <p data-editable="">Creator and facilitator of professional certificate programs for healthcare providers, yoga and Pilates teachers, and somatic practitioners.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Speaking &amp; Podcast Appearances</h4>
+            <h4 data-editable=""><strong>Speaking &amp; Podcast Appearances</strong></h4>
             <p data-editable="">Invited speaker and guest on chronic pain, nervous system regulation, and pain communication for professional and public audiences.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">Ongoing Learning</h4>
-            <p data-editable="">Active participant in continuing education across pain science, movement, embodiment, and person-centred care.</p>
+            <h4 data-editable=""><strong>Ongoing Learning</strong></h4>
+            <p data-editable="">Active participant in continuing education across pain science, anatomy, nervous system regulation, mindfulness, movement, embodiment, and person-centred care.</p>
           </div>
           <div class="timeline-item">
-            <h4 data-editable="">28+ Years in Practice</h4>
-            <p data-editable="">Montreal-based, with a practice, a community, and a commitment to advancing how pain is understood and treated with online participants from all over the world.</p>
+            <h4 data-editable=""><strong>30+ Years in Practice</strong></h4>
+            <p data-editable="">Colleen teaches &amp; speaks internationally, both online and in person. She is based in Montreal, with an established practice, a community, and a commitment to advancing how pain is understood.&nbsp; She has taught and supported online participants from all over the world.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <section class="section" data-zone="philosophy" data-zone-label="Philosophy and Approach" id="philosophy" style="position: relative;">
     <div class="container">
